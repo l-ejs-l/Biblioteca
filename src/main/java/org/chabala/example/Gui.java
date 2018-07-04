@@ -2,6 +2,7 @@ package org.chabala.example;
 
 import common.dominios.Autor;
 import common.dominios.Libro;
+import common.dominios.Periodico;
 import common.dominios.Recurso;
 import common.dominios.enums.TipoRecurso;
 
@@ -33,6 +34,9 @@ public class Gui {
 
     public static void main(String[] args) {
         new Gui();
+
+        Periodico periodico = new Periodico();
+        periodico.get
     }
 
     public Gui() {

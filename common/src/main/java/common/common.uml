@@ -3,16 +3,32 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="302.0" y="0.0">common.UsuarioMulta</node>
-    <node x="0.0" y="0.0">common.DetallePrestamo</node>
-    <node x="0.0" y="296.0">common.Prestamo</node>
+    <node x="816.0" y="0.0">common.dominios.DetallePrestamo</node>
+    <node x="544.0" y="636.0">common.dominios.Region</node>
+    <node x="816.0" y="636.0">common.dominios.CopiaRecurso</node>
+    <node x="0.0" y="0.0">common.dominios.Biblioteca</node>
+    <node x="544.0" y="910.0">common.dominios.Autor</node>
+    <node x="272.0" y="0.0">common.dominios.Recurso</node>
+    <node x="298.0" y="340.0">common.dominios.Usuario</node>
+    <node x="0.0" y="636.0">common.dominios.DetalleFactura</node>
+    <node x="544.0" y="0.0">common.dominios.Prestamo</node>
+    <node x="816.0" y="910.0">common.dominios.Multa</node>
+    <node x="570.0" y="340.0">common.dominios.Proveedor</node>
+    <node x="272.0" y="910.0">common.dominios.Zona</node>
+    <node x="272.0" y="636.0">common.dominios.Libro</node>
+    <node x="1088.0" y="910.0">common.dominios.Topico</node>
+    <node x="0.0" y="1162.0">common.dominios.Periodico</node>
+    <node x="842.0" y="340.0">common.dominios.Factura</node>
+    <node x="272.0" y="1162.0">common.dominios.Editorial</node>
+    <node x="0.0" y="340.0">common.dominios.UsuarioMulta</node>
+    <node x="1088.0" y="636.0">common.dominios.Pedido</node>
+    <node x="544.0" y="1162.0">common.dominios.Revista</node>
+    <node x="0.0" y="910.0">common.dominios.Comuna</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="0.5566076829614488" x="563.6497519687102" y="615.7082910627412" />
-  <SelectedNodes>
-    <node>common.UsuarioMulta</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic Group" zoom="1.0" x="666.0" y="450.0" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
