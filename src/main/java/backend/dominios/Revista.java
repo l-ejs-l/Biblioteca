@@ -1,6 +1,5 @@
 package backend.dominios;
 
-import backend.abstractos.dominios.BaseResource;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,7 +12,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity(name = "Revista")
-public class Revista extends BaseResource implements Serializable {
+public class Revista implements Serializable {
 
     private static final long serialVersionUID = -7282557000429342984L;
 
