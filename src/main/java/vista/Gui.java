@@ -1,7 +1,6 @@
 package vista;
 
 import backend.abstractos.helpers.PersistenceManager;
-import backend.dominios.Revista;
 import backend.dominios.Usuario;
 import java.awt.*;
 import javax.persistence.EntityManager;
@@ -29,7 +28,6 @@ public class Gui {
     private void showFrame() {
         EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
-        
 // ***************************************
 //       /* 1. USUARIOS Y ROLES */
 //        ArrayList<Rol> roles = new ArrayList<>();
@@ -61,7 +59,6 @@ public class Gui {
 //            usuarioSaved.setApellido("");
 //        }
 // ***************************************
-
 // ***************************************
         /* 2. Libros con mapeo de super clase */
 //        Libro libro = new Libro();
@@ -80,8 +77,6 @@ public class Gui {
 //                .setParameter("titulo", "The number of the beast")
 //                .getSingleResult();
 // ***************************************
-
-
 // ***************************************
         /* 3. Periodicos con mapeo de super clase  */
 //        
@@ -99,30 +94,84 @@ public class Gui {
 //                .setParameter("titulo", "Diario el sur")
 //                .getSingleResult();
 // ***************************************
-
 // ***************************************
-
-        Revista revista = new Revista();
-        revista.setTitulo("Revista qlia");
-        revista.setTotalPaginas(30);
-       
-        em.getTransaction().begin();
-        em.persist(revista);
-        em.getTransaction().commit();
-        
-        Revista revistaSaved = (Revista) em.createQuery("SELECT r FROM Revista r WHERE r.titulo = :titulo")
-                .setParameter("titulo", "Revista qlia")
-                .getSingleResult();
-        
-
-
+        /* 4. Revista con mapeo de super class */
+//        Revista revista = new Revista();
+//        revista.setTitulo("Revista qlia");
+//        revista.setTotalPaginas(30);
+//       
+//        em.getTransaction().begin();
+//        em.persist(revista);
+//        em.getTransaction().commit();
+//        
+//        Revista revistaSaved = (Revista) em.createQuery("SELECT r FROM Revista r WHERE r.titulo = :titulo")
+//                .setParameter("titulo", "Revista qlia")
+//                .getSingleResult();
+//        
+// ***************************************
+// ***************************************
+//        /* 5. Recurso - Autor - Editorial - Recurso_Autor- Topico - Topico_Recurso - */
+//        Autor autor1 = new Autor();
+//        autor1.setNombre("Carlos Qliao");
+//
+//        Autor autor2 = new Autor();
+//        autor2.setNombre("Juan Qliao");
+//
+//        em.getTransaction().begin();
+//        em.persist(autor1);
+//        em.flush();
+//
+//        em.persist(autor2);
+//        em.flush();
+//
+//        ArrayList<Autor> autores = new ArrayList<>();
+//        autores.add(autor1);
+//        autores.add(autor2);
+//
+//        Editorial editorial = new Editorial();
+//        editorial.setEditorial("McgrawHill");
+//        em.persist(editorial);
+//        em.flush();
+//
+//        Topico topico1 = new Topico();
+//        topico1.setTopico("Fantasia");
+//
+//        Topico topico2 = new Topico();
+//        topico2.setTopico("Epico");
+//
+//        em.persist(topico1);
+//        em.flush();
+//        em.persist(topico2);
+//        em.flush();
+//
+//        ArrayList<Topico> topicos = new ArrayList<>();
+//        topicos.add(topico1);
+//        topicos.add(topico2);
+//
+//        Recurso recurso = new Recurso();
+//        recurso.setAutores(autores);
+//        recurso.setEditorial(editorial);
+//        recurso.setTipoRecurso(TipoRecurso.LIBRO);
+//        recurso.setTipoTexto(TipoTexto.ALTA_DEMANDA);
+//        recurso.setTitulo("Metamorfosis");
+//        recurso.setTotalPaginas(450);
+//        recurso.setTopicos(topicos);
+//
+//        em.persist(recurso);
+//        em.flush();
+//        em.getTransaction().commit();
+//
+//        em.getTransaction().begin();
+//        Recurso recursoSaved = em.find(Recurso.class, recurso.getId());
+// ***************************************
         JFrame frame = new JFrame("Beeper " + count++);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         frame.setLayout(new FlowLayout());
         frame.add(new JLabel("Hello World"));
         frame.add(new BeepingButton("Click Me"));
-        frame.add(new LabelDisplay(revistaSaved.getTitulo() + " " + revistaSaved.getId() + " " + revistaSaved.getTotalPaginas()));
+//        frame.add(new LabelDisplay(recursoSaved.getId() + " " + recursoSaved.getTipoRecurso().toString() + " " + recursoSaved.getTitulo()));
+//        frame.add(new LabelDisplay((recursoSaved.getAutores().get(1) + " " + recursoSaved.getEditorial() + " " + recursoSaved.getTipoTexto().toString())));
 
         frame.pack();
         if (lastFrame == null) {
