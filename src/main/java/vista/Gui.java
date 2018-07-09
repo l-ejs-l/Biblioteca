@@ -1,9 +1,6 @@
 package vista;
 
-import backend.abstractos.helpers.PersistenceManager;
-import backend.dominios.Usuario;
 import java.awt.*;
-import javax.persistence.EntityManager;
 import javax.swing.*;
 
 /**
@@ -26,7 +23,6 @@ public class Gui {
     }
 
     private void showFrame() {
-        EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
 
 // ***************************************
 //       /* 1. USUARIOS Y ROLES */
@@ -170,7 +166,7 @@ public class Gui {
         frame.setLayout(new FlowLayout());
         frame.add(new JLabel("Hello World"));
         frame.add(new BeepingButton("Click Me"));
-//        frame.add(new LabelDisplay(recursoSaved.getId() + " " + recursoSaved.getTipoRecurso().toString() + " " + recursoSaved.getTitulo()));
+//        frame.add(new LabelDisplay(usuarioSaved.getId() + " " + usuarioSaved.getRoles().get(1) + " " + usuarioSaved.getNombre()));
 //        frame.add(new LabelDisplay((recursoSaved.getAutores().get(1) + " " + recursoSaved.getEditorial() + " " + recursoSaved.getTipoTexto().toString())));
 
         frame.pack();
@@ -184,8 +180,6 @@ public class Gui {
         lastFrame = frame;
         frame.setVisible(true);
 
-        em.close();
-        PersistenceManager.INSTANCE.close();
     }
 
     private static class LabelDisplay extends JLabel {
@@ -208,21 +202,6 @@ public class Gui {
                 new Gui();
             });
         }
-    }
-
-    public static void createUser() {
-        EntityManager em = PersistenceManager.INSTANCE.getEntityManager();
-
-        Usuario usuario = new Usuario();
-        usuario.setActivo(false);
-        usuario.setApellido("Jeldes");
-        usuario.setNombre("Emilio");
-
-        em.getTransaction().begin();
-        em.persist(usuario);
-        em.getTransaction().commit();
-        em.close();
-        PersistenceManager.INSTANCE.close();
     }
 
     public static void main(String[] args) {
