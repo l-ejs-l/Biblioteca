@@ -4,7 +4,6 @@ import common.dominios.FreeCuenta;
 
 public class DatabaseTest {
 
-
     public static void main(String[] args) {
 
         CuentaDAOImpl cuentaDAO = new CuentaDAOImpl();
