@@ -2,10 +2,11 @@ package vista;
 
 import common.dominios.Cuenta;
 import common.dominios.FreeCuenta;
+import vista.controller.Controller;
+
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import javax.swing.*;
-import vista.controller.Controller;
 
 public class MainFrame extends JFrame implements LogInEventListener, FreeRegistrationEventListener, RequestAccountEventListener {
 
@@ -15,7 +16,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
     public MainFrame(boolean view) {
         setVisible(true);
         controller = new Controller();
-        connectDb();
         loginDialog = new LoginDialog(this);
         loginDialog.setLogInEventListener(this);
         loginDialog.setFreeRegEventListener(this);
@@ -90,25 +90,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
         );
     }
 
-
-
-
-
-
-    public void connectDb() {
-        if (controller != null) {
-            try {
-                controller.connect();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void disconnectDb() {
-        controller.disconnect();
-    }
-
     @Override
     public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
         String username = e.getUserName();
@@ -125,19 +106,28 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
     @Override
     public void requestAccountEventOccurred(RequestAccountEvent e) {
         Cuenta cuenta = e.getCuenta();
-        boolean b = controller.isExistingAccount(cuenta);
+        boolean b = false;
+        try {
+            b = controller.isExistingAccount(cuenta);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
         loginDialog.isAccountTaken(b);
     }
 
     @Override
     public void loginEventOccurred(Cuenta cuenta) {
-        if (controller.isValidLogin(cuenta)) {
-            initUI();
-            loginDialog.setVisible(false);
-            loginDialog.isValidLogin(true);
-        } else {
-            initUI();
-            loginDialog.isValidLogin(false);
+        try {
+            if (controller.isValidLogin(cuenta)) {
+                initUI();
+                loginDialog.setVisible(false);
+                loginDialog.isValidLogin(true);
+            } else {
+                initUI();
+                loginDialog.isValidLogin(false);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

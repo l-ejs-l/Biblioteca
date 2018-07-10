@@ -1,32 +1,27 @@
 package vista.controller;
 
-import common.dao.Database;
+import common.dao.CuentaDAOImpl;
 import common.dominios.Cuenta;
+import common.interfaces.dao.CuentaDAO;
+
 import java.sql.SQLException;
 
 public class Controller {
 
-    private Database db = new Database();
+    private CuentaDAO db = new CuentaDAOImpl();
 
     public Controller() {
 
     }
 
-    public void connect() throws Exception {
-        db.connect();
-    }
 
-    public void disconnect() {
-        db.disconnect();
-    }
-
-    public boolean isExistingAccount(Cuenta cuenta) {
-        boolean w = db.isAccountTaken(cuenta);
+    public boolean isExistingAccount(Cuenta cuenta) throws Exception {
+        boolean w = db.isCuentaTaken(cuenta);
         System.out.println("isExistingAccount =" + w);
         return w;
     }
 
-    public boolean isValidLogin(Cuenta cuenta) {
+    public boolean isValidLogin(Cuenta cuenta) throws Exception {
         boolean w = db.isValidLogin(cuenta);
         System.out.println("isValidLogin =" + w);
         return w;
@@ -35,9 +30,11 @@ public class Controller {
 
     public void addAccount(Cuenta cuenta) {
         try {
-            db.addAccount(cuenta);
+            db.save(cuenta);
         } catch (SQLException e) {
 
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

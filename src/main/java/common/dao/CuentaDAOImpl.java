@@ -77,13 +77,10 @@ public class CuentaDAOImpl implements CuentaDAO {
                 statement.setString(6, email);
                 statement.executeUpdate();
 
-                statement.close();
             } catch (SQLException e) {
                 System.out.println("SQL Exception in save()");
                 e.printStackTrace();
                 throw new Exception(e.getMessage());
-            } finally {
-                closeResources();
             }
 
         }
@@ -128,8 +125,6 @@ public class CuentaDAOImpl implements CuentaDAO {
         } catch (SQLException e) {
             System.out.println("SQL Exception in isAccountTaken()");
             e.printStackTrace();
-        } finally {
-            closeResources();
         }
         return false;
     }
@@ -163,27 +158,10 @@ public class CuentaDAOImpl implements CuentaDAO {
         } catch (SQLException e) {
             System.out.println("SQL Exception in isAccountTaken()");
             e.printStackTrace();
-        } finally {
-            closeResources();
         }
 
         return false;
     }
 
-    private void closeResources() throws Exception {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-            if (statement != null) {
-                statement.close();
-            }
-            if (resultSet != null) {
-                resultSet.close();
-            }
-        } catch (SQLException e) {
-            e.getStackTrace();
-        }
 
-    }
 }
