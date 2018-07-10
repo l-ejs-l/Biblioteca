@@ -11,6 +11,9 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="12" style="1"/>
         </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[1200, 25]"/>
+        </Property>
       </Properties>
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -156,9 +159,9 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="pnlDatosCliente1" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlRegistroPrestamos" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="pnlDatosCliente4" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlDevolucionMultas" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="pnlIngresoMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -167,7 +170,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="610" max="32767" attributes="0"/>
-                  <Component id="pnlDatosCliente2" min="-2" max="-2" attributes="0"/>
+                  <Component id="pnlClientes" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="610" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -178,9 +181,9 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnlDatosCliente1" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="pnlRegistroPrestamos" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                      <Component id="pnlDatosCliente4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnlDevolucionMultas" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="pnlIngresoMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -188,7 +191,7 @@
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  <Component id="pnlDatosCliente2" min="-2" max="-2" attributes="0"/>
+                  <Component id="pnlClientes" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -196,7 +199,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="pnlDatosCliente1">
+    <Container class="javax.swing.JPanel" name="pnlRegistroPrestamos">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -680,7 +683,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="pnlDatosCliente4">
+    <Container class="javax.swing.JPanel" name="pnlDevolucionMultas">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -1366,7 +1369,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="pnlDatosCliente2">
+    <Container class="javax.swing.JPanel" name="pnlClientes">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="cc" red="ff" type="rgb"/>
