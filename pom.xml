@@ -7,7 +7,6 @@
     <groupId>cl.inacap</groupId>
     <artifactId>biblioteca</artifactId>
     <version>jar</version>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
