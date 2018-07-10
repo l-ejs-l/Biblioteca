@@ -4,6 +4,7 @@ import common.dominios.Recurso;
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
 import common.interfaces.dao.RecursoDAO;
+
 import java.util.List;
 import java.util.Set;
 
@@ -44,6 +45,10 @@ public class RecursoDAOImpl implements RecursoDAO {
 
     @Override
     public void remove(int id) {
+
+    }
+
+    private void closeConnection() throws Exception {
 
     }
 }
