@@ -163,12 +163,12 @@ public class FreeRegistrationDialog extends JDialog {
                             + "la Clave debe contener un dígito de 0-9, debe contener un carácter en minúscula, debe contener un carácter en mayúscula, una longitud de al menos 6-20");
                     return false;
                 }
-                lblError.setText("Usuario_ invalido");
+                lblError.setText("Usuario invalido");
                 return false;
             }
         });
 
-        JLabel lblNewLabel = new JLabel("Usuario_*");
+        JLabel lblNewLabel = new JLabel("Usuario*");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 
         JLabel lblNewLabel_1 = new JLabel("Clave*");

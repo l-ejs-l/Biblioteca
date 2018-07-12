@@ -158,10 +158,10 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
 
     public boolean isValidLogin(boolean b) {
         if (b == true) {
-            JOptionPane.showMessageDialog(null, "Successful Login");
+            JOptionPane.showMessageDialog(null, "Ingreso correcto");
 
         } else {
-            JOptionPane.showMessageDialog(null, "Login Failed");
+            JOptionPane.showMessageDialog(null, "Ingreso fallido");
         }
         return false;
 

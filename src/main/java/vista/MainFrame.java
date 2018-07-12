@@ -31,12 +31,12 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
 
     @Override
     public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
-        String username = e.getUserName();
+        String username = e.getUsername();
         String password = e.getPassword();
-        boolean member = e.isMember();
-        String fName = e.getfName();
-        String lName = e.getlName();
-        String email = e.getEmail();
+        boolean member = e.isEs_miembro();
+        String fName = e.getNombre();
+        String lName = e.getApellido();
+        String email = e.getCorreo();
         FreeUsuario fa = new FreeUsuario(username, password, fName, lName, email);
         controller.addAccount(fa);
     }

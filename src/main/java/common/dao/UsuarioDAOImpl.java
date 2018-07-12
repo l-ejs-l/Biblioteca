@@ -38,7 +38,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 //
 //            while (result.next()) {
 //                System.out.println(result.getInt("ID") + '\t'
-//                    + result.getString("Usuario_") + '\t'
+//                    + result.getString("Usuario") + '\t'
 //                    + result.getString("Clave") + '\t'
 //                    + result.getBoolean("Member"));
 //            }

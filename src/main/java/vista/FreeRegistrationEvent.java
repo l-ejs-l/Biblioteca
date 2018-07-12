@@ -4,67 +4,67 @@ import java.util.EventObject;
 
 public class FreeRegistrationEvent extends EventObject {
 
-    private String userName;
+    private String username;
     private String password;
-    private boolean member;
-    private String fName;
-    private String lName;
-    private String email;
+    private boolean es_miembro;
+    private String nombre;
+    private String apellido;
+    private String correo;
 
     public FreeRegistrationEvent(Object source) {
         super(source);
 
     }
 
-    public FreeRegistrationEvent(Object source, String userName, String password) {
+    public FreeRegistrationEvent(Object source, String username, String password) {
         super(source);
-        this.userName = userName;
+        this.username = username;
         this.password = password;
-        fName = null;
-        lName = null;
-        email = null;
+        nombre = null;
+        apellido = null;
+        correo = null;
     }
 
-    public FreeRegistrationEvent(Object source, String userName,
-            String password, String fName, String lName, String email) {
+    public FreeRegistrationEvent(Object source, String username,
+                                 String password, String nombre, String apellido, String correo) {
         super(source);
-        this.userName = userName;
+        this.username = username;
         this.password = password;
-        this.member = false;//Free account
-        this.fName = fName;
-        this.lName = lName;
-        this.email = email;
+        this.es_miembro = false;//Free account
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public boolean isMember() {
-        return member;
+    public boolean isEs_miembro() {
+        return es_miembro;
     }
 
-    public String getfName() {
-        return fName;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getlName() {
-        return lName;
+    public String getApellido() {
+        return apellido;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreo() {
+        return correo;
     }
 
     @Override
     public String toString() {
-        return "FreeRegistrationEvent [usuario=" + userName + ", clave="
-                + password + ", es_miembro=" + member + ", nombre=" + fName
-                + ", apellido=" + lName + ", correo=" + email + "]";
+        return "FreeRegistrationEvent [usuario=" + username + ", clave="
+            + password + ", es_miembro=" + es_miembro + ", nombre=" + nombre
+            + ", apellido=" + apellido + ", correo=" + correo + "]";
     }
 
 }
