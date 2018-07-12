@@ -10,17 +10,17 @@ public interface CuentaDAO extends DAO<Cuenta> {
     /**
      * Método de verificacion si una cuenta esta tomada
      *
-     * @param cuenta
-     * @return boolean
-     * @throws Exception
+     * @param cuenta Recibe una entidad tipo cuenta
+     * @return boolean isCuentaTaken
+     * @throws Exception Lanza una excepcion en caso de no poder recuperar el valor
      */
     public boolean isCuentaTaken(Cuenta cuenta) throws Exception;
 
     /**
      * Método de verificacion de login
      *
-     * @param cuenta
-     * @return boolean
+     * @param cuenta Recibe una entidad cuenta
+     * @return boolean 
      * @throws Exception
      */
     public boolean isValidLogin(Cuenta cuenta) throws Exception;
