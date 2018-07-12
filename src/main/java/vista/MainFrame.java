@@ -1,12 +1,11 @@
 package vista;
 
-import common.dominios.Cuenta;
-import common.dominios.FreeCuenta;
+import common.dominios.Usuario;
+import common.dominios.FreeUsuario;
 import vista.controller.Controller;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 
 public class MainFrame extends JFrame implements LogInEventListener, FreeRegistrationEventListener, RequestAccountEventListener {
 
@@ -38,14 +37,14 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
         String fName = e.getfName();
         String lName = e.getlName();
         String email = e.getEmail();
-        FreeCuenta fa = new FreeCuenta(username, password, fName, lName, email);
+        FreeUsuario fa = new FreeUsuario(username, password, fName, lName, email);
         controller.addAccount(fa);
     }
 
 
     @Override
     public void requestAccountEventOccurred(RequestAccountEvent e) {
-        Cuenta cuenta = e.getCuenta();
+        Usuario cuenta = e.getCuenta();
         boolean b = false;
         try {
             b = controller.isExistingAccount(cuenta);
@@ -56,7 +55,7 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
     }
 
     @Override
-    public void loginEventOccurred(Cuenta cuenta) {
+    public void loginEventOccurred(Usuario cuenta) {
         try {
             if (controller.isValidLogin(cuenta)) {
                 loginDialog.setVisible(false);
@@ -74,4 +73,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
             e.printStackTrace();
         }
     }
+
+
 }

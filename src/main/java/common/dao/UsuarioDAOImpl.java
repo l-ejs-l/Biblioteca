@@ -1,26 +1,23 @@
 package common.dao;
 
-/**
- * Created by Papalapapiricoipi on 11-07-2018.
- */
-
+import common.dominios.*;
+import common.dominios.FreeUsuario;
 import common.dominios.Usuario;
 import common.dominios.enums.Tabla;
 import common.interfaces.dao.UsuarioDAO;
 
-import java.sql.*;
-import java.util.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Esta clase implementa la interfaz UsuarioDAO y sus métodos para mantener la entidad Usuario
  */
-public class UsuarioDAOlmpl implements UsuarioDAO {
+public class UsuarioDAOImpl implements UsuarioDAO {
 
-    private static final String INSERT_Usuario = "INSERT INTO " + Tabla.Usuario + "(usuario,clave,es_miembro,nombre,apellido,correo) values(?,?,?,?,?,?)";
+    private static final String INSERT_CUENTA = "INSERT INTO " + Tabla.Cuenta + "(usuario,clave,es_miembro,nombre,apellido,correo) values(?,?,?,?,?,?)";
 
     private PreparedStatement statement = null;
     private Connection connection = null;
@@ -33,22 +30,22 @@ public class UsuarioDAOlmpl implements UsuarioDAO {
 
     @Override
     public List<Usuario> findAll() throws Exception {
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet result = statement
-                .executeQuery("SELECT * FROM " + Tabla.Usuario);
-            int numOfCol = result.getMetaData().getColumnCount();
-
-            while (result.next()) {
-                System.out.println(result.getInt("ID") + '\t'
-                    + result.getString("Usuario") + '\t'
-                    + result.getString("Clave") + '\t'
-                    + result.getBoolean("Member"));
-            }
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+//        try {
+//            Statement statement = connection.createStatement();
+//            ResultSet result = statement
+//                .executeQuery("SELECT * FROM " + Tabla.Usuario);
+//            int numOfCol = result.getMetaData().getColumnCount();
+//
+//            while (result.next()) {
+//                System.out.println(result.getInt("ID") + '\t'
+//                    + result.getString("Usuario_") + '\t'
+//                    + result.getString("Clave") + '\t'
+//                    + result.getBoolean("Member"));
+//            }
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
         return null;
 
     }
@@ -58,18 +55,20 @@ public class UsuarioDAOlmpl implements UsuarioDAO {
 
         String username = entity.username();
         String password = entity.password();
-        boolean es_miembro = entity.es_miembro();
-/*
+        boolean member = entity.es_miembro();
+
         if (entity instanceof FreeUsuario) {
             FreeUsuario fa = (FreeUsuario) entity;
             String firstName = fa.getfName();
             String lastName = fa.getlName();
             String email = fa.getEmail();
-
+            /*
+             *
+             */
             try {
                 connection = Database.getConnection();
                 statement = connection
-                    .prepareStatement(INSERT_Usuario);
+                    .prepareStatement(INSERT_CUENTA);
                 statement.setString(1, username);
                 statement.setString(2, password);
                 statement.setBoolean(3, false);
@@ -89,7 +88,7 @@ public class UsuarioDAOlmpl implements UsuarioDAO {
         if (entity instanceof ClubUsuario) {
 
         }
-*/
+
     }
 
     @Override
@@ -104,19 +103,19 @@ public class UsuarioDAOlmpl implements UsuarioDAO {
 
 
     @Override
-    public boolean isUsuarioTaken(Usuario Usuario) throws Exception {
-        String username = Usuario.username();
-        String password = Usuario.password();
+    public boolean isCuentaTaken(Usuario cuenta) throws Exception {
+        String username = cuenta.username();
+        String password = cuenta.password();
 
         PreparedStatement insertStatement;
         try {
             insertStatement = Database.getConnection()
-                .prepareStatement("SELECT * FROM " + Tabla.Usuario + " WHERE usuario=?");
+                .prepareStatement("SELECT * FROM " + Tabla.Cuenta + " WHERE usuario=?");
             insertStatement.setString(1, username);
             ResultSet resultSet = insertStatement.executeQuery();
             if (resultSet.next()) {
                 String user = resultSet.getString("usuario");
-                if (user.equals(Usuario.username())) {
+                if (user.equals(cuenta.username())) {
 
                     return true;
                 }
@@ -131,21 +130,21 @@ public class UsuarioDAOlmpl implements UsuarioDAO {
     }
 
     @Override
-    public boolean isValidLogin(Usuario Usuario) throws Exception {
-        String username = Usuario.username();
-        String password = Usuario.password();
+    public boolean isValidLogin(Usuario cuenta) throws Exception {
+        String username = cuenta.username();
+        String password = cuenta.password();
 
         PreparedStatement insertStatement;
         try {
             insertStatement = Database.getConnection()
-                .prepareStatement("SELECT * FROM " + Tabla.Usuario + " WHERE usuario=?");
+                .prepareStatement("SELECT * FROM " + Tabla.Cuenta + " WHERE usuario=?");
             insertStatement.setString(1, username);
             ResultSet resultSet = insertStatement.executeQuery();
             if (resultSet.first()) {
                 if (resultSet.getString("usuario").equals(
-                    Usuario.username())) {
+                    cuenta.username())) {
                     if (resultSet.getString("clave").equals(
-                        Usuario.password())) {
+                        cuenta.password())) {
                         return true;
                     } else {
                         return false;

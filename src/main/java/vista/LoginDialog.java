@@ -1,6 +1,5 @@
 package vista;
 
-import common.dominios.Cuenta;
 import common.dominios.Usuario;
 
 import java.awt.*;
@@ -38,7 +37,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
         gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         contentPanel.setLayout(gbl_contentPanel);
 
-        JLabel lblUsername = new JLabel("Usuario");
+        JLabel lblUsername = new JLabel("Usuario_");
         lblUsername.setFont(new Font("Tahoma", Font.BOLD, 13));
         GridBagConstraints gbc_lblUsername = new GridBagConstraints();
         gbc_lblUsername.insets = new Insets(0, 0, 5, 5);
@@ -90,10 +89,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
             public void actionPerformed(ActionEvent arg0) {
                 String username = textField.getText();
                 String pass = new String(passwordField.getPassword());
-                Cuenta cuenta = new Cuenta(username, pass, false);
-                Usuario usuario = new Usuario(username, pass, false);
-                if (loginListener != null)
-                    loginListener.loginEventOccurred(usuario);
+                Usuario cuenta = new Usuario(username, pass, false);
                 if (loginListener != null)
                     loginListener.loginEventOccurred(cuenta);
             }

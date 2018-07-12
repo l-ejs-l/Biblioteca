@@ -1,22 +1,23 @@
 package vista;
 
 
-import common.dominios.Cuenta;
+import common.dominios.Usuario;
+
 import java.util.EventObject;
 
 public class RequestAccountEvent extends EventObject{
-	private Cuenta cuenta;
+	private Usuario cuenta;
 	
 	public RequestAccountEvent(Object source){
 		super(source);
 	}
 	
-	public RequestAccountEvent(Object source, Cuenta cuenta){
+	public RequestAccountEvent(Object source, Usuario cuenta){
 		super(source);
 		this.cuenta = cuenta;
 	}	
 	
-	public Cuenta getCuenta(){
+	public Usuario getCuenta(){
 		return cuenta;
 	}
 	

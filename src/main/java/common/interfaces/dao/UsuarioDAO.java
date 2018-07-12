@@ -1,10 +1,5 @@
 package common.interfaces.dao;
 
-/**
- * Created by Papalapapiricoipi on 11-07-2018.
- */ 
- 
-
 import common.dominios.Usuario;
 
 /**
@@ -13,21 +8,21 @@ import common.dominios.Usuario;
 public interface UsuarioDAO extends DAO<Usuario> {
 
     /**
-     * Método de verificacion si Usuario esta tomado
+     * Método de verificacion si una cuenta esta tomada
      *
-     * @param Usuario
+     * @param cuenta
      * @return boolean
      * @throws Exception
      */
-    public boolean isUsuarioTaken(Usuario Usuario) throws Exception;
+    public boolean isCuentaTaken(Usuario cuenta) throws Exception;
 
     /**
      * Método de verificacion de login
      *
-     * @param Usuario
+     * @param cuenta
      * @return boolean
      * @throws Exception
      */
-    public boolean isValidLogin(Usuario Usuario) throws Exception;
+    public boolean isValidLogin(Usuario cuenta) throws Exception;
 
 }

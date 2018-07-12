@@ -2,27 +2,17 @@ package common.dominios;
 
 import common.dominios.enums.Rol;
 
-import java.io.Serializable;
 import java.util.List;
 
-import lombok.Data;
+public class Usuario {
 
-@Data
-public class Usuario implements Serializable {
-
-    private static final long serialVersionUID = 3779276593963622412L;
-
-    private int id;
-
-    public int id() {
-        return id;
-    }
 
     public Usuario(String username, String password, boolean es_miembro) {
         this.username = username;
         this.password = password;
-        this.es_miembro = es_miembro;
     }
+
+    private int id;
 
     public void id(int id) {
         this.id = id;
@@ -97,4 +87,6 @@ public class Usuario implements Serializable {
     public void es_miembro(boolean es_miembro) {
         this.es_miembro = es_miembro;
     }
+
+
 }

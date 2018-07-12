@@ -2,9 +2,9 @@ package common.dominios;
 
 
 
-public class ClubCuenta extends Cuenta {
+public class ClubUsuario extends Usuario {
 
-	public ClubCuenta(String username, String password) {
+	public ClubUsuario(String username, String password) {
 		super(username, password,true);
 		// TODO Auto-generated constructor stub
 	}

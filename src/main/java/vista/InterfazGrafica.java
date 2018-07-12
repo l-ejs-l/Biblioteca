@@ -38,7 +38,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     /**
      * Este metodo acepta un Jpanel y le añade setVisible() a true y el resto de los elementos de la
-     * lista los deja en false
+     * lista los deja en falsez
      *
      * @param panel
      */
@@ -193,10 +193,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         jLabel69.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel69.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel69.setText("Listar Multas del Usuario");
+        jLabel69.setText("Listar Multas del Usuario_");
 
         jLabel41.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel41.setText("Id Usuario:");
+        jLabel41.setText("Id Usuario_:");
 
         btn_Registrar_Registrar_Func.setText("Registrar");
         btn_Registrar_Registrar_Func.addActionListener(new java.awt.event.ActionListener() {
@@ -261,7 +261,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         jLabel72.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel72.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel72.setText("Listar Préstamos al Usuario");
+        jLabel72.setText("Listar Préstamos al Usuario_");
 
         btn_Registrar_Renovar_Func.setText("Renovar");
         btn_Registrar_Renovar_Func.addActionListener(new java.awt.event.ActionListener() {
@@ -490,7 +490,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addGap(0, 164, Short.MAX_VALUE))
         );
 
-        jLabel69.getAccessibleContext().setAccessibleName("Listar Préstamos al Usuario");
+        jLabel69.getAccessibleContext().setAccessibleName("Listar Préstamos al Usuario_");
 
         pnlDevolucionMultas.setBackground(new java.awt.Color(255, 204, 102));
         pnlDevolucionMultas.setAlignmentX(0.0F);
@@ -504,7 +504,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jLabel24.setText("Devolución");
 
         jLabel42.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel42.setText("Id Usuario:");
+        jLabel42.setText("Id Usuario_:");
 
         btn_Devolucion_Registrar_Func.setText("Registrar");
         btn_Devolucion_Registrar_Func.addActionListener(new java.awt.event.ActionListener() {
@@ -604,7 +604,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String[]{
-                "Id Usuario", "Material Nombre", "Cantidad de Multas"
+                "Id Usuario_", "Material Nombre", "Cantidad de Multas"
             }
         ));
         jScrollPane11.setViewportView(tbl_Listar_Multas_Usuarios_Func);
