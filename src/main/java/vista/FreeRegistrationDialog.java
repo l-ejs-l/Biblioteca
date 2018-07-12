@@ -137,7 +137,7 @@ public class FreeRegistrationDialog extends JDialog {
                     Usuario usuario = new Usuario(username, new String(pass), false);
                     reqlistener.requestAccountEventOccurred(new RequestAccountEvent(this, cuenta));
                     if (accountTaken) {
-                        JOptionPane.showMessageDialog(null, "nombre is taken");
+                        JOptionPane.showMessageDialog(null, "Usuario no valido");
                         clearAllFields();
                         return false;
                     }

@@ -1,6 +1,8 @@
 package vista;
 
 import common.dominios.Cuenta;
+import common.dominios.Usuario;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -89,6 +91,9 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
                 String username = textField.getText();
                 String pass = new String(passwordField.getPassword());
                 Cuenta cuenta = new Cuenta(username, pass, false);
+                Usuario usuario = new Usuario(username, pass, false);
+                if (loginListener != null)
+                    loginListener.loginEventOccurred(usuario);
                 if (loginListener != null)
                     loginListener.loginEventOccurred(cuenta);
             }
