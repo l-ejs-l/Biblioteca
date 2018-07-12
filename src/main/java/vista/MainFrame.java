@@ -60,7 +60,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
         try {
             if (controller.isValidLogin(cuenta)) {
                 loginDialog.setVisible(false);
-
                 loginDialog.isValidLogin(true);
                 java.awt.EventQueue.invokeLater(new Runnable() {
                     public void run() {
