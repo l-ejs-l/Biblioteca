@@ -18,6 +18,11 @@ public class Usuario implements Serializable {
         return id;
     }
 
+    public Usuario(String username, String clave, boolean es_miembro) {
+        this.username = username;
+        this.password = clave;
+    }
+
     public void id(int id) {
         this.id = id;
     }
