@@ -14,7 +14,7 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
     private Controller controller;
 
     public MainFrame(boolean view) {
-        setVisible(true);
+        this.setVisible(false);
         controller = new Controller();
         loginDialog = new LoginDialog(this);
         loginDialog.setLogInEventListener(this);
@@ -29,66 +29,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
 
     }
 
-    public final void initUI() {
-
-        createToolBars();
-
-        setTitle("Biblioteca");
-        setSize(1024, 768);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-    }
-
-    private void createToolBars() {
-
-        JToolBar toolbar1 = new JToolBar();
-        JToolBar toolbar2 = new JToolBar();
-        String a = "src/main/resources/img/";
-        ImageIcon newIcon = new ImageIcon(a + "home.png");
-        ImageIcon openIcon = new ImageIcon(a + "new-book.png");
-        ImageIcon saveIcon = new ImageIcon(a + "gestion.png");
-        ImageIcon exitIcon = new ImageIcon(a + "exit.png");
-
-        JButton newBtn = new JButton(newIcon);
-        JButton openBtn = new JButton(openIcon);
-        JButton saveBtn = new JButton(saveIcon);
-        saveBtn.addActionListener(ae -> new SecondFrame());
-        JPanel buttonPane = new JPanel();
-        buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-        getContentPane().add(buttonPane, BorderLayout.SOUTH);
-
-        saveBtn.setSize(100, 100);
-        saveBtn.setVisible(true);
-        toolbar1.add(newBtn);
-        toolbar1.add(openBtn);
-        toolbar1.add(saveBtn);
-
-        JButton exitBtn = new JButton(exitIcon);
-        toolbar2.add(exitBtn);
-
-        exitBtn.addActionListener((ActionEvent event) -> {
-            System.exit(0);
-        });
-
-        createLayout(toolbar1, toolbar2);
-    }
-
-    private void createLayout(JComponent... arg) {
-
-        Container pane = getContentPane();
-        GroupLayout gl = new GroupLayout(pane);
-        pane.setLayout(gl);
-
-        gl.setHorizontalGroup(gl.createParallelGroup().addComponent(arg[0], GroupLayout.PREFERRED_SIZE,
-            GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE).addComponent(arg[1], GroupLayout.PREFERRED_SIZE,
-            GroupLayout.PREFERRED_SIZE, Short.MAX_VALUE)
-        );
-
-        gl.setVerticalGroup(gl.createSequentialGroup()
-            .addComponent(arg[0])
-            .addComponent(arg[1])
-        );
-    }
 
     @Override
     public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
@@ -109,8 +49,8 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
         boolean b = false;
         try {
             b = controller.isExistingAccount(cuenta);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         loginDialog.isAccountTaken(b);
     }
@@ -119,11 +59,16 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
     public void loginEventOccurred(Cuenta cuenta) {
         try {
             if (controller.isValidLogin(cuenta)) {
-                initUI();
                 loginDialog.setVisible(false);
+
                 loginDialog.isValidLogin(true);
+                java.awt.EventQueue.invokeLater(new Runnable() {
+                    public void run() {
+                        new InterfazGrafica();
+                    }
+                });
             } else {
-                initUI();
+
                 loginDialog.isValidLogin(false);
             }
         } catch (Exception e) {
