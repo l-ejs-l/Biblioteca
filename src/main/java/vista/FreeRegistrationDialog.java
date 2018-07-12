@@ -82,11 +82,10 @@ public class FreeRegistrationDialog extends JDialog {
                             FreeRegistrationEvent ev = new FreeRegistrationEvent(this, username, password, fName, lName, email);
                             System.out.println(ev);
                             if (listener != null) {
-                                //	System.out.println("in FreeRegDialog, free reg event occured notifying observers");
                                 JOptionPane.showMessageDialog(null, "Registrado!");
                                 listener.FreeRegistrationEventOccurred(ev);
                             } else {
-                                System.out.println("listener is null");
+                                System.out.println("nulo");
                             }
                             clearAllFields();
                             setVisible(false);
@@ -115,7 +114,7 @@ public class FreeRegistrationDialog extends JDialog {
 
             private boolean ValidateName(String fName, String lName) {
                 if (fName.equals("") || lName.equals("")) {
-                    System.out.println("nombre o apellido nulo");
+                    System.out.println("Nombre o apellido nulo");
                     return true;
                 }
                 final String NAME_PATTERN = "\\w+";
@@ -129,13 +128,13 @@ public class FreeRegistrationDialog extends JDialog {
                 return false;
             }
 
-            private boolean ValidateRequiredField(String name, char[] pass, char[] cpass) { //validate username, pass, confirm pass
+            private boolean ValidateRequiredField(String username, char[] pass, char[] cpass) { //validate username, pass, confirm pass
                 if (reqlistener == null) {
                     System.out.println("uh oh reqlistener is null");
                     return false;
                 } else {
-                    Cuenta cuenta = new Cuenta(name, new String(pass), false);
-                    Usuario usuario = new Usuario(name, new String(pass), false);
+                    Cuenta cuenta = new Cuenta(username, new String(pass), false);
+                    Usuario usuario = new Usuario(username, new String(pass), false);
                     reqlistener.requestAccountEventOccurred(new RequestAccountEvent(this, cuenta));
                     if (accountTaken) {
                         JOptionPane.showMessageDialog(null, "nombre is taken");
@@ -145,7 +144,7 @@ public class FreeRegistrationDialog extends JDialog {
                 }
 
                 Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$"); //pattern for username
-                Matcher matcher = pattern.matcher(name);
+                Matcher matcher = pattern.matcher(username);
                 if (matcher.matches() == true) {
                     String password = new String(pass);
                     String cPassword = new String(cpass);

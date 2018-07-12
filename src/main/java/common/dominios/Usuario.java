@@ -18,9 +18,10 @@ public class Usuario implements Serializable {
         return id;
     }
 
-    public Usuario(String username, String clave, boolean es_miembro) {
+    public Usuario(String username, String password, boolean es_miembro) {
         this.username = username;
-        this.password = clave;
+        this.password = password;
+        this.es_miembro = es_miembro;
     }
 
     public void id(int id) {
