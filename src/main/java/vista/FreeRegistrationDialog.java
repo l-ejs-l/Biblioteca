@@ -14,14 +14,14 @@ import javax.swing.border.EtchedBorder;
 
 public class FreeRegistrationDialog extends JDialog {
 
-    private JPasswordField passwordField;
-    private JPanel buttonPane;
-    private JTextField userNameField;
-    private JPasswordField passwordField_1;
-    private JPasswordField passwordField_2;
-    private JTextField firstNameField;
-    private JTextField lastNameField;
-    private JTextField emailField;
+    private JPasswordField jPPassword;
+    private JPanel jPanel;
+    private JTextField jTUserName;
+    private JPasswordField jPPasswordI;
+    private JPasswordField jPPasswordII;
+    private JTextField jTNombre;
+    private JTextField jTApellido;
+    private JTextField jTCorreo;
     private FreeRegistrationEventListener listener;
     private final JLabel lblError;
     private RequestAccountEventListener reqlistener;
@@ -36,17 +36,17 @@ public class FreeRegistrationDialog extends JDialog {
 
         setBounds(100, 100, 418, 457);
 
-        buttonPane = new JPanel();
-        buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        jPanel = new JPanel();
+        jPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
         JButton okButton = new JButton("Guardar");
         okButton.setActionCommand("Guardar");
-        buttonPane.add(okButton);
+        jPanel.add(okButton);
         getRootPane().setDefaultButton(okButton);
 
         JButton cancelButton = new JButton("Cancelar");
         cancelButton.setActionCommand("Cancelar");
-        buttonPane.add(cancelButton);
+        jPanel.add(cancelButton);
         cancelButton.addActionListener(new ActionListener() {
 
             @Override
@@ -61,24 +61,24 @@ public class FreeRegistrationDialog extends JDialog {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (ValidateRequiredField(userNameField.getText(), passwordField_1.getPassword(), passwordField_2.getPassword())) {
-                    if (ValidateName(firstNameField.getText(), lastNameField.getText())) {
-                        if (ValidateEmail(emailField.getText())) {
-                            String username = userNameField.getText();
-                            String password = new String(passwordField_1.getPassword());
-                            String fName = firstNameField.getText();
-                            String lName = lastNameField.getText();
-                            String email = emailField.getText();
-                            if (fName == null) {
-                                fName = "";
+                if (ValidateRequiredField(jTUserName.getText(), jPPasswordI.getPassword(), jPPasswordII.getPassword())) {
+                    if (ValidateName(jTNombre.getText(), jTApellido.getText())) {
+                        if (ValidateEmail(jTCorreo.getText())) {
+                            String username = jTUserName.getText();
+                            String password = new String(jPPasswordI.getPassword());
+                            String nombre = jTNombre.getText();
+                            String apellido = jTApellido.getText();
+                            String correo = jTCorreo.getText();
+                            if (nombre == null) {
+                                nombre = "";
                             }
-                            if (lName == null) {
-                                lName = "";
+                            if (apellido == null) {
+                                apellido = "";
                             }
-                            if (email == null) {
-                                email = "";
+                            if (correo == null) {
+                                correo = "";
                             }
-                            FreeRegistrationEvent ev = new FreeRegistrationEvent(this, username, password, fName, lName, email);
+                            FreeRegistrationEvent ev = new FreeRegistrationEvent(this, username, password, nombre, apellido, correo);
                             System.out.println(ev);
                             if (listener != null) {
                                 //	System.out.println("in FreeRegDialog, free reg event occured notifying observers");
@@ -180,12 +180,12 @@ public class FreeRegistrationDialog extends JDialog {
         JPanel panel = new JPanel();
         panel.setBorder(new EtchedBorder(EtchedBorder.RAISED, null, null));
 
-        userNameField = new JTextField();
-        userNameField.setColumns(10);
+        jTUserName = new JTextField();
+        jTUserName.setColumns(10);
 
-        passwordField_1 = new JPasswordField();
+        jPPasswordI = new JPasswordField();
 
-        passwordField_2 = new JPasswordField();
+        jPPasswordII = new JPasswordField();
 
         lblError.setForeground(Color.RED);
         lblError.setFont(new Font("Source Sans Pro", Font.PLAIN, 11));
@@ -196,7 +196,7 @@ public class FreeRegistrationDialog extends JDialog {
                 groupLayout.createParallelGroup(Alignment.LEADING)
                         .addGroup(groupLayout.createSequentialGroup()
                                 .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(buttonPane, GroupLayout.PREFERRED_SIZE, 412, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanel, GroupLayout.PREFERRED_SIZE, 412, GroupLayout.PREFERRED_SIZE)
                                         .addGroup(groupLayout.createSequentialGroup()
                                                 .addGap(55)
                                                 .addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
@@ -210,9 +210,9 @@ public class FreeRegistrationDialog extends JDialog {
                                                                 .addGap(48)
                                                                 .addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
                                                                         .addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-                                                                                .addComponent(passwordField_2)
-                                                                                .addComponent(passwordField_1)
-                                                                                .addComponent(userNameField))
+                                                                                .addComponent(jPPasswordII)
+                                                                                .addComponent(jPPasswordI)
+                                                                                .addComponent(jTUserName))
                                                                         .addComponent(lblFieldsRequired))))))
                                 .addContainerGap(22, Short.MAX_VALUE))
         );
@@ -225,36 +225,36 @@ public class FreeRegistrationDialog extends JDialog {
                                         .addComponent(lblFieldsRequired))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(userNameField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTUserName, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(lblNewLabel))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblNewLabel_1)
-                                        .addComponent(passwordField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPPasswordI, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblNewLabel_2)
-                                        .addComponent(passwordField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPPasswordII, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18)
                                 .addComponent(panel, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE)
                                 .addGap(30)
-                                .addComponent(buttonPane, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         );
 
         JLabel lblNewLabel_4 = new JLabel("Nombre");
 
         JLabel lblNewLabel_5 = new JLabel("Apellidos");
 
-        firstNameField = new JTextField();
-        firstNameField.setColumns(10);
+        jTNombre = new JTextField();
+        jTNombre.setColumns(10);
 
-        lastNameField = new JTextField();
-        lastNameField.setColumns(10);
+        jTApellido = new JTextField();
+        jTApellido.setColumns(10);
 
         JLabel lblEmail = new JLabel("Correo");
 
-        emailField = new JTextField();
-        emailField.setColumns(10);
+        jTCorreo = new JTextField();
+        jTCorreo.setColumns(10);
         GroupLayout gl_panel = new GroupLayout(panel);
         gl_panel.setHorizontalGroup(
                 gl_panel.createParallelGroup(Alignment.LEADING)
@@ -266,9 +266,9 @@ public class FreeRegistrationDialog extends JDialog {
                                         .addComponent(lblEmail))
                                 .addPreferredGap(ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
                                 .addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(firstNameField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lastNameField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(emailField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTNombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTApellido, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTCorreo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(61, Short.MAX_VALUE))
         );
         gl_panel.setVerticalGroup(
@@ -277,15 +277,15 @@ public class FreeRegistrationDialog extends JDialog {
                                 .addGap(21)
                                 .addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblNewLabel_4)
-                                        .addComponent(firstNameField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTNombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblNewLabel_5)
-                                        .addComponent(lastNameField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTApellido, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
                                 .addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(lblEmail)
-                                        .addComponent(emailField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jTCorreo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(92, Short.MAX_VALUE))
         );
         panel.setLayout(gl_panel);
@@ -293,12 +293,12 @@ public class FreeRegistrationDialog extends JDialog {
     }
 
     private void clearAllFields() {
-        userNameField.setText("");
-        passwordField_1.setText("");
-        passwordField_2.setText("");
-        firstNameField.setText("");
-        lastNameField.setText("");
-        emailField.setText("");
+        jTUserName.setText("");
+        jPPasswordI.setText("");
+        jPPasswordII.setText("");
+        jTNombre.setText("");
+        jTApellido.setText("");
+        jTCorreo.setText("");
     }
 
     public boolean isAccountTaken(boolean b) {

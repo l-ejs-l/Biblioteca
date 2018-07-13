@@ -37,7 +37,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
         gbl_contentPanel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
         contentPanel.setLayout(gbl_contentPanel);
 
-        JLabel lblUsername = new JLabel("Usuario_");
+        JLabel lblUsername = new JLabel("Usuario");
         lblUsername.setFont(new Font("Tahoma", Font.BOLD, 13));
         GridBagConstraints gbc_lblUsername = new GridBagConstraints();
         gbc_lblUsername.insets = new Insets(0, 0, 5, 5);
