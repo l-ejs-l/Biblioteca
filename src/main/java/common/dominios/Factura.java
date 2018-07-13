@@ -7,6 +7,7 @@ import lombok.Data;
 public class Factura {
 
     private int id;
+    private int total;
     private Biblioteca bibliotecaOrigen;
     private Biblioteca bibliotecaDestino;
     private Proveedor proveedor;

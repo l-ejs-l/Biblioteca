@@ -11,6 +11,5 @@ public class Prestamo {
     private Date fin;
     private Date usoTotal;
     private Biblioteca bibliotecaOrigen;
-    private Biblioteca bibliotecaDestino;
 
 }

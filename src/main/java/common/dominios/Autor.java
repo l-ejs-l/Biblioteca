@@ -10,5 +10,6 @@ public class Autor implements Serializable {
 
     private int id;
     private String nombre;
+    private String apellido;
 
 }

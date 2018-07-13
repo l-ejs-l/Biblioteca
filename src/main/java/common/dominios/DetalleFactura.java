@@ -7,8 +7,8 @@ import lombok.Data;
 public class DetalleFactura {
 
     private int id;
+    private int total;
     private Factura factura;
     private Set<Pedido> pedidos;
-    private int total;
 
 }

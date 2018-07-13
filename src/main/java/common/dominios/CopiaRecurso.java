@@ -9,5 +9,6 @@ public class CopiaRecurso {
     private int id;
     private Recurso recurso;
     private EstadoCopia estadoCopia;
+    private Biblioteca sucursal;
 
 }
