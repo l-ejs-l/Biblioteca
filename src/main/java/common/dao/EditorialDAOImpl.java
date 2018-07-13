@@ -12,7 +12,8 @@ import java.util.List;
 
 public class EditorialDAOImpl implements EditorialDAO {
 
-    private static final String SAVE_EDITORIAL = "INSERT INTO " + Tabla.Editorial + "(editorial) VALUES (?)";
+    private static final String SAVE_EDITORIAL = "INSERT INTO " + Tabla.Editorial + " (editorial) VALUES (?)";
+    private static final String FIND_EDITORIAL_BY_NAME = "SELECT * FROM " + Tabla.Editorial + " WHERE editorial = (?)";
     private PreparedStatement statement = null;
     private Connection connection = null;
     private ResultSet resultSet = null;
@@ -55,5 +56,30 @@ public class EditorialDAOImpl implements EditorialDAO {
     @Override
     public void remove(int id) throws Exception {
 
+    }
+
+    @Override
+    public Editorial findByName(String name) throws Exception {
+        try {
+            connection = Database.getConnection();
+            statement = connection.prepareStatement(FIND_EDITORIAL_BY_NAME);
+            statement.setString(1, name);
+            resultSet = statement.executeQuery();
+
+            Editorial editorial;
+            if (resultSet.next()) {
+                editorial = new Editorial();
+                editorial.setEditorial(resultSet.getString("editorial"));
+                editorial.setId(resultSet.getInt("id_editorial"));
+                return editorial;
+            }
+
+            throw new Exception("No se encontró una Editorial con el nombre indicado");
+
+        } catch (SQLException e) {
+            System.out.println("SQLException in EditorialDAO.find()");
+            e.printStackTrace();
+            throw new Exception(e.getMessage());
+        }
     }
 }
