@@ -7,8 +7,8 @@ import java.util.List;
 public class Usuario {
 
 
-    public Usuario(String username, String password, boolean es_miembro) {
-        this.username = username;
+    public Usuario(String usuario, String password, boolean es_miembro) {
+        this.usuario = usuario;
         this.password = password;
     }
 
@@ -58,14 +58,14 @@ public class Usuario {
         this.roles = roles;
     }
 
-    private String username;
+    private String usuario;
 
-    public String username() {
-        return username;
+    public String usuario() {
+        return usuario;
     }
 
-    public void username(String username) {
-        this.username = username;
+    public void usuario(String usuario) {
+        this.usuario = usuario;
     }
 
     private String password;

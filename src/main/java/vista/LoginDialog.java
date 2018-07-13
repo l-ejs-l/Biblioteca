@@ -55,21 +55,8 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
         grigBagTextField.gridy = 1;
         contentPanel.add(textField, grigBagTextField);
         textField.setColumns(10);
-/*
-        JLabel lblUsername = new JLabel("Usuario");
-        JLabel lblUsername = new JLabel("Usuario");
-        JLabel lblUsername = new JLabel("Usuario");
-        JLabel lblUsername = new JLabel("Usuario");
 
-        id_usuario,
-            nombre,
-            usuario,
-            clave,
-            es_miembro,
-            apellido,
-            correo,
-            cod_sucursal,
-            activo*/
+
 
         JLabel lblPassword = new JLabel("Clave");
         lblPassword.setFont(new Font("Tahoma", Font.BOLD, 13));

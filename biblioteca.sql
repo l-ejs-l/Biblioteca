@@ -145,25 +145,26 @@ CREATE TABLE Topico_Recurso (
   id_topico  INTEGER NOT NULL,
   id_recurso INTEGER NOT NULL
 );
-
-CREATE TABLE Usuario (
-  id_usuario   INTEGER     NOT NULL,
-  nombre       VARCHAR(30) NOT NULL,
-  usuario      VARCHAR(30) NOT NULL,
-  clave        VARCHAR(30) NOT NULL,
-  es_miembro   SMALLINT DEFAULT 0,
-  apellido     VARCHAR(30),
-  correo       VARCHAR(50) NOT NULL,
-  cod_sucursal INTEGER     NOT NULL,
-  activo       SMALLINT    NOT NULL
-);
+CREATE TABLE `Usuario` (
+  `id_usuario`   MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+  `nombre`       VARCHAR(100)          DEFAULT NULL,
+  `usuario`      VARCHAR(100)          DEFAULT NULL,
+  `clave`        VARCHAR(100)          DEFAULT NULL,
+  `es_miembro`   TINYINT(1)            DEFAULT '0',
+  `apellido`     VARCHAR(100)          DEFAULT NULL,
+  `correo`       VARCHAR(100)          DEFAULT NULL,
+  `activo`       TINYINT(1)            DEFAULT '0',
+  `cod_sucursal` INTEGER      NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+)
+  ENGINE = MyISAM
+  DEFAULT CHARSET = latin1;
 
 CREATE UNIQUE INDEX usuario__idx ON
   Usuario (
     cod_sucursal
     ASC);
 
-ALTER TABLE Usuario ADD CONSTRAINT usuario_pk PRIMARY KEY (id_usuario);
 
 CREATE TABLE Usuario_Multa (
   id_usuario_multa INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT,

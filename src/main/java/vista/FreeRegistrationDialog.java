@@ -128,7 +128,7 @@ public class FreeRegistrationDialog extends JDialog {
                 return false;
             }
 
-            private boolean ValidateRequiredField(String name, char[] pass, char[] cpass) { //validate username, pass, confirm pass
+            private boolean ValidateRequiredField(String name, char[] pass, char[] cpass) { //validate usuario, pass, confirm pass
                 if (reqlistener == null) {
                     System.out.println("Usuario o Clave sin registrar");
                     return false;
@@ -142,7 +142,7 @@ public class FreeRegistrationDialog extends JDialog {
                     }
                 }
 
-                Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$"); //pattern for username
+                Pattern pattern = Pattern.compile("^[a-z0-9_-]{3,15}$"); //pattern for usuario
                 Matcher matcher = pattern.matcher(name);
                 if (matcher.matches() == true) {
                     String password = new String(pass);

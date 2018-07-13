@@ -28,14 +28,14 @@ public class FreeUsuario extends Usuario {
 		return email;
 	}
 	
-	public String username(){
-		return super.username();
+	public String usuario(){
+		return super.usuario();
 	}
 	public String password(){
 		return super.password();
 	}
-	public void username(String username){
-		super.username(username);
+	public void usuario(String usuario){
+		super.usuario(usuario);
 	}
 	public void password(String password){
 		super.password(password);
