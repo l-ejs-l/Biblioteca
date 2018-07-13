@@ -14,29 +14,9 @@ import java.util.List;
  */
 public class UsuarioDAOImpl implements UsuarioDAO {
 
-    private static final String INSERT_CUENTA = "INSERT INTO " + Tabla.Cuenta + "(usuario,clave,es_miembro,nombre,apellido,correo) values(?,?,?,?,?,?)";
+   // private static final String INSERT_CUENTA = "INSERT INTO " + Tabla.Cuenta + "(usuario,clave,es_miembro,nombre,apellido,correo) values(?,?,?,?,?,?)";
 
-    String a = "INSERT INTO biblioteca.Usuario(\n" +
-        "   id_usuario\n" +
-        "  ,nombre\n" +
-        "  ,usuario\n" +
-        "  ,clave\n" +
-        "  ,es_miembro\n" +
-        "  ,apellido\n" +
-        "  ,correo\n" +
-        "  ,cod_sucursal\n" +
-        "  ,activo\n" +
-        ") VALUES (\n" +
-        "   NULL -- id_usuario - IN int(11)\n" +
-        "  ,NULL -- nombre - IN varchar(30)\n" +
-        "  ,NULL -- usuario - IN varchar(30)\n" +
-        "  ,NULL -- clave - IN varchar(30)\n" +
-        "  ,0   -- es_miembro - IN smallint(6)\n" +
-        "  ,''  -- apellido - IN varchar(30)\n" +
-        "  ,NULL -- correo - IN varchar(50)\n" +
-        "  ,NULL -- cod_sucursal - IN int(11)\n" +
-        "  ,NULL -- activo - IN smallint(6)\n" +
-        ")";
+    private static final String INSERT_USUARIO = "INSERT INTO " + Tabla.Usuario + "(nombre,usuario,clave,es_miembro,apellido,correo,activo,cod_sucursal) VALUES (?,?,?,?,?,?,?,?)";
 
     private PreparedStatement statement = null;
     private Connection connection = null;
@@ -72,28 +52,39 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     @Override
     public void save(Usuario entity) throws Exception {
 
-        String username = entity.usuario();
+        String usuario = entity.usuario();
         String password = entity.password();
-        boolean member = entity.es_miembro();
+        boolean es_miembro = entity.es_miembro();
 
         if (entity instanceof FreeUsuario) {
             FreeUsuario fa = (FreeUsuario) entity;
-            String firstName = fa.getfName();
-            String lastName = fa.getlName();
-            String email = fa.getEmail();
+            String nombre = fa.getfName();
+            String apellido = fa.getlName();
+            String correo = fa.getEmail();
+            boolean activo = true;
             /*
              *
              */
             try {
                 connection = Database.getConnection();
                 statement = connection
-                    .prepareStatement(INSERT_CUENTA);
-                statement.setString(1, username);
+                    .prepareStatement(INSERT_USUARIO);
+               /* statement.setString(1, usuario);
                 statement.setString(2, password);
                 statement.setBoolean(3, false);
-                statement.setString(4, firstName);
-                statement.setString(5, lastName);
-                statement.setString(6, email);
+                statement.setString(4, nombre);
+                statement.setString(5, apellido);
+                statement.setString(6, correo);*/
+
+                statement.setString(1, nombre);
+                statement.setString(2, usuario);
+                statement.setString(3, password);
+                statement.setBoolean(4, es_miembro);
+                statement.setString(5, apellido);
+                statement.setString(6, correo);
+                statement.setBoolean(7, activo);
+                statement.setInt(8, 12345);
+
                 statement.executeUpdate();
 
             } catch (SQLException e) {
@@ -122,19 +113,19 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 
     @Override
-    public boolean isCuentaTaken(Usuario cuenta) throws Exception {
-        String username = cuenta.usuario();
-        String password = cuenta.password();
+    public boolean isCuentaTaken(Usuario usuario) throws Exception {
+        String username = usuario.usuario();
+        String password = usuario.password();
 
         PreparedStatement insertStatement;
         try {
             insertStatement = Database.getConnection()
-                .prepareStatement("SELECT * FROM " + Tabla.Cuenta + " WHERE usuario=?");
+                .prepareStatement("SELECT * FROM " + Tabla.Usuario + " WHERE usuario=?");
             insertStatement.setString(1, username);
             ResultSet resultSet = insertStatement.executeQuery();
             if (resultSet.next()) {
                 String user = resultSet.getString("usuario");
-                if (user.equals(cuenta.usuario())) {
+                if (user.equals(usuario.usuario())) {
 
                     return true;
                 }
@@ -156,7 +147,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         PreparedStatement insertStatement;
         try {
             insertStatement = Database.getConnection()
-                .prepareStatement("SELECT * FROM " + Tabla.Cuenta + " WHERE usuario=?");
+                .prepareStatement("SELECT * FROM " + Tabla.Usuario + " WHERE usuario=?");
             insertStatement.setString(1, username);
             ResultSet resultSet = insertStatement.executeQuery();
             if (resultSet.first()) {
