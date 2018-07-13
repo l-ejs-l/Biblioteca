@@ -89,10 +89,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         txaClientes2 = new javax.swing.JTextArea();
         btnEliminar2 = new javax.swing.JButton();
-        btnInsertar8 = new javax.swing.JButton();
-        btnActualizar5 = new javax.swing.JButton();
-        btnEliminar5 = new javax.swing.JButton();
-        btnLimpiar5 = new javax.swing.JButton();
         pnl_Administrador1 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -364,34 +360,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        btnInsertar8.setText("Renovar");
-        btnInsertar8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertar8ActionPerformed(evt);
-            }
-        });
-
-        btnActualizar5.setText("Actualizar");
-        btnActualizar5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizar5ActionPerformed(evt);
-            }
-        });
-
-        btnEliminar5.setText("Eliminar");
-        btnEliminar5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminar5ActionPerformed(evt);
-            }
-        });
-
-        btnLimpiar5.setText("Limpiar");
-        btnLimpiar5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiar5ActionPerformed(evt);
-            }
-        });
 
         pnl_Administrador1.setBackground(new java.awt.Color(255, 204, 102));
 
@@ -1366,17 +1334,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(1749, 1749, 1749)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInsertar8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnActualizar5, javax.swing.GroupLayout.DEFAULT_SIZE, 1262, Short.MAX_VALUE)
-                    .addComponent(btnEliminar5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimpiar5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(layout.createSequentialGroup()
                 .addComponent(pnl_Administrador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnl_Administrador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 86, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1384,15 +1345,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_Administrador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnl_Administrador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(76, 76, 76)
-                .addComponent(btnInsertar8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnActualizar5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnEliminar5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnLimpiar5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
@@ -1421,22 +1374,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void btnEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminar2ActionPerformed
-
-    private void btnActualizar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizar5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizar5ActionPerformed
-
-    private void btnLimpiar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiar5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLimpiar5ActionPerformed
-
-    private void btnEliminar5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar5ActionPerformed
-
-    private void btnInsertar8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertar8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnInsertar8ActionPerformed
 
     private void mniDatosClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDatosClienteActionPerformed
         // TODO add your handling code here:
@@ -1673,14 +1610,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar2;
-    private javax.swing.JButton btnActualizar5;
     private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnEliminar2;
-    private javax.swing.JButton btnEliminar5;
     private javax.swing.JButton btnInsertar2;
-    private javax.swing.JButton btnInsertar8;
     private javax.swing.JButton btnLimpiar2;
-    private javax.swing.JButton btnLimpiar5;
     private javax.swing.JButton btnListar2;
     private javax.swing.JButton btn_Bibliotecas_Actualizar_Admin;
     private javax.swing.JButton btn_Bibliotecas_Borrar_Admin;
