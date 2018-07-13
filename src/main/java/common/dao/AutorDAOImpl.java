@@ -34,9 +34,14 @@ public class AutorDAOImpl implements AutorDAO {
             statement = connection.prepareStatement(SAVE_AUTOR);
             statement.setString(1, entity.getNombre());
             statement.setString(2, entity.getApellido());
-            // TODO continuar
+            int update = statement.executeUpdate();
+
+            if (update == 0) {
+                throw new Exception("No se realizo persistencia del autor");
+            }
+
         } catch (SQLException e) {
-            System.out.println("SQLException in LibroDAO.save()");
+            System.out.println("SQLException in AutorDao.save()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
