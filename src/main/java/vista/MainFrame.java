@@ -7,7 +7,7 @@ import vista.controller.Controller;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainFrame extends JFrame implements LogInEventListener, FreeRegistrationEventListener, RequestAccountEventListener {
+public class MainFrame extends JFrame implements LogInEventListener, RegistrationEventListener, RequestAccountEventListener {
 
     private LoginDialog loginDialog;
     private Controller controller;
@@ -30,7 +30,7 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
 
 
     @Override
-    public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
+    public void FreeRegistrationEventOccurred(RegistrationEvent e) {
         String username = e.getUsername();
         String password = e.getPassword();
         boolean member = e.isEs_miembro();

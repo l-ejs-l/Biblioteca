@@ -8,14 +8,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class LoginDialog extends JDialog implements FreeRegistrationEventListener, RequestAccountEventListener {
+public class LoginDialog extends JDialog implements RegistrationEventListener, RequestAccountEventListener {
 
     private final JPanel contentPanel = new JPanel();
     private JTextField textField;
     private JPasswordField passwordField;
-    private FreeRegistrationDialog freeRegistrationDialog;
+    private RegistrationDialog registrationDialog;
     private LogInEventListener loginListener;
-    private FreeRegistrationEventListener freeRegListener;
+    private RegistrationEventListener freeRegListener;
     private RequestAccountEventListener reqlistener;
     private boolean isExistingAccount;
 
@@ -24,7 +24,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
      */
     public LoginDialog(JFrame parent) {
         super(parent, "Ingresar", true);//true sets modal
-        freeRegistrationDialog = new FreeRegistrationDialog(this);
+        registrationDialog = new RegistrationDialog(this);
 
         setBounds(100, 100, 400, 235);
         getContentPane().setLayout(new BorderLayout());
@@ -106,10 +106,10 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                freeRegistrationDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-                freeRegistrationDialog.setFreeRegistrationEventOberservers(LoginDialog.this);
-                freeRegistrationDialog.setRequestAccountEventListener(LoginDialog.this);
-                freeRegistrationDialog.setVisible(true);
+                registrationDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+                registrationDialog.setFreeRegistrationEventOberservers(LoginDialog.this);
+                registrationDialog.setRequestAccountEventListener(LoginDialog.this);
+                registrationDialog.setVisible(true);
             }
         });
         buttonPane.add(btnRegFree);
@@ -125,7 +125,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
     }
 
     public boolean isAccountTaken(boolean b) {
-        freeRegistrationDialog.isAccountTaken(b);
+        registrationDialog.isAccountTaken(b);
 
         return b;
     }
@@ -134,14 +134,14 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
         this.loginListener = listener;
     }
 
-    public void setFreeRegEventListener(FreeRegistrationEventListener listener) {
+    public void setFreeRegEventListener(RegistrationEventListener listener) {
         this.freeRegListener = listener;
     }
 
 
-    //FreeRegistrationDialog calling this method, pass event object to MainFrame
+    //RegistrationDialog calling this method, pass event object to MainFrame
     @Override
-    public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
+    public void FreeRegistrationEventOccurred(RegistrationEvent e) {
         if (freeRegListener == null) {
             System.out.println("in Login: freeRegListener = null");
         }

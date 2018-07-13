@@ -2,7 +2,7 @@ package vista;
 
 import java.util.EventObject;
 
-public class FreeRegistrationEvent extends EventObject {
+public class RegistrationEvent extends EventObject {
 
     private String username;
     private String password;
@@ -10,13 +10,14 @@ public class FreeRegistrationEvent extends EventObject {
     private String nombre;
     private String apellido;
     private String correo;
+    private boolean activo;
 
-    public FreeRegistrationEvent(Object source) {
+    public RegistrationEvent(Object source) {
         super(source);
 
     }
 
-    public FreeRegistrationEvent(Object source, String username, String password) {
+    public RegistrationEvent(Object source, String username, String password) {
         super(source);
         this.username = username;
         this.password = password;
@@ -25,8 +26,7 @@ public class FreeRegistrationEvent extends EventObject {
         correo = null;
     }
 
-    public FreeRegistrationEvent(Object source, String username,
-                                 String password, String nombre, String apellido, String correo) {
+    public RegistrationEvent(Object source, String username, String password, String nombre, String apellido, String correo, boolean activo) {
         super(source);
         this.username = username;
         this.password = password;
@@ -34,6 +34,7 @@ public class FreeRegistrationEvent extends EventObject {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
+        this.activo = activo;
     }
 
     public String getUsername() {
@@ -62,7 +63,7 @@ public class FreeRegistrationEvent extends EventObject {
 
     @Override
     public String toString() {
-        return "FreeRegistrationEvent [usuario=" + username + ", clave="
+        return "RegistrationEvent [usuario=" + username + ", clave="
             + password + ", es_miembro=" + es_miembro + ", nombre=" + nombre
             + ", apellido=" + apellido + ", correo=" + correo + "]";
     }
