@@ -2,11 +2,11 @@ package vista;
 
 import common.dominios.Usuario;
 
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
 public class LoginDialog extends JDialog implements FreeRegistrationEventListener, RequestAccountEventListener {
 

@@ -1,6 +1,6 @@
 package common.dao;
 
-import common.dominios.*;
+import common.dominios.ClubUsuario;
 import common.dominios.FreeUsuario;
 import common.dominios.Usuario;
 import common.dominios.enums.Tabla;

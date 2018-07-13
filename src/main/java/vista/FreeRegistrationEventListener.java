@@ -1,5 +1,5 @@
 package vista;
 
 public interface FreeRegistrationEventListener {
-	void FreeRegistrationEventOccurred(FreeRegistrationEvent e);
+    void FreeRegistrationEventOccurred(FreeRegistrationEvent e);
 }

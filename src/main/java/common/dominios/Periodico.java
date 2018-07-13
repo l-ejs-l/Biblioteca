@@ -1,7 +1,8 @@
 package common.dominios;
 
+import lombok.Data;
+
 import java.io.Serializable;
-import lombok.*;
 
 @Data
 public class Periodico implements Serializable {

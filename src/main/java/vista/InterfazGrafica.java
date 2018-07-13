@@ -5,8 +5,8 @@
  */
 package vista;
 
-import java.util.ArrayList;
 import javax.swing.*;
+import java.util.ArrayList;
 
 /**
  * @author claus

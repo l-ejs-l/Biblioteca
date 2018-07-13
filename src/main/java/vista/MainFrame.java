@@ -1,7 +1,7 @@
 package vista;
 
-import common.dominios.Usuario;
 import common.dominios.FreeUsuario;
+import common.dominios.Usuario;
 import vista.controller.Controller;
 
 import javax.swing.*;

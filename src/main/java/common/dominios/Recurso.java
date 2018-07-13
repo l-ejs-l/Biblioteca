@@ -2,9 +2,10 @@ package common.dominios;
 
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
-import lombok.Data;
 
 @Data
 public class Recurso implements Serializable {

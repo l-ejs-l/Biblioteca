@@ -3,6 +3,7 @@ package common.interfaces.dao;
 import common.dominios.Recurso;
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
+
 import java.util.Set;
 
 /**
@@ -12,6 +13,7 @@ import java.util.Set;
 public interface RecursoDAO extends DAO<Recurso> {
 
 //    Definicion de métodos personalizados para la conexion recurso Dato ej:
+
     /**
      * Este método realiza una busqueda en la base de datos por entidades tipo recurso que contengan
      * el TipoRecurso especificado

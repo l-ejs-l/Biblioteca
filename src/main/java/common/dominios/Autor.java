@@ -1,7 +1,8 @@
 package common.dominios;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 @Data
 public class Autor implements Serializable {
