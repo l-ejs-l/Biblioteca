@@ -11,14 +11,14 @@ import javax.swing.*;
 /**
  * @author claus
  */
-public class InterfazGrafica extends javax.swing.JFrame {
+public class InterfazGrafica_Funcionario extends javax.swing.JFrame {
 
     ArrayList<JPanel> listaComponentes = new ArrayList<>();
 
     /**
      * Creates new form Aplicacion
      */
-    public InterfazGrafica() {
+    public InterfazGrafica_Funcionario() {
         initComponents();
         initComponentsList();
         setVisibleComponent(pnlIngresoMaterial);
@@ -176,7 +176,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         mnSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1200, 625));
 
         pnlRegistroPrestamos.setBackground(new java.awt.Color(255, 204, 102));
         pnlRegistroPrestamos.setAlignmentX(0.0F);
@@ -356,23 +355,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
                         .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlRegistroPrestamosLayout.createSequentialGroup()
-                                .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel41)
-                                    .addComponent(jLabel59)
-                                    .addComponent(btn_Registrar_Registrar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
-                                .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
-                                        .addComponent(btn_Registrar_Renovar_Func, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(btn_Registrar_Actualizar_Func))
-                                    .addComponent(txt_Registrar_NombreCompleto_Func, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
-                                        .addComponent(rbtRolEstudiante_Func)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(rbtRolDocente_Func))
-                                    .addComponent(txt_Registrar_IdUsuario_Func, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                .addComponent(btn_Registrar_Registrar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 433, Short.MAX_VALUE)
+                                .addComponent(btn_Registrar_Renovar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Registrar_Actualizar_Func))
                             .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
                                 .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel46)
@@ -385,7 +372,21 @@ public class InterfazGrafica extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jLabel50)
                                 .addGap(18, 18, 18)
-                                .addComponent(txt_Registrar_FechaPrestamo_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(txt_Registrar_FechaPrestamo_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
+                                .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel41)
+                                    .addComponent(jLabel59))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_Registrar_NombreCompleto_Func, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
+                                        .addComponent(rbtRolEstudiante_Func)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(rbtRolDocente_Func))
+                                    .addComponent(txt_Registrar_IdUsuario_Func, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(24, 24, 24))
                     .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
                         .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -486,7 +487,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_Registrar_Eliminar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_Registrar_LimpiarCampos_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 164, Short.MAX_VALUE))
+                .addGap(0, 187, Short.MAX_VALUE))
         );
 
         jLabel69.getAccessibleContext().setAccessibleName("Listar Préstamos al Usuario");
@@ -886,7 +887,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                                             .addComponent(jLabel43)
                                             .addComponent(jLabel63)
                                             .addComponent(jLabel44))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 320, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 345, Short.MAX_VALUE)
                                         .addGroup(pnlIngresoMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(txt_RegistrarMaterial_TopicoEstudio_Func, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIngresoMaterialLayout.createSequentialGroup()
@@ -1242,7 +1243,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 610, Short.MAX_VALUE)
@@ -1473,14 +1474,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1489,7 +1494,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazGrafica().setVisible(true);
+                new InterfazGrafica_Funcionario().setVisible(true);
             }
         });
     }

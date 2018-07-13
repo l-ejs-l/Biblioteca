@@ -62,7 +62,7 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
                 loginDialog.isValidLogin(true);
                 java.awt.EventQueue.invokeLater(new Runnable() {
                     public void run() {
-                        new InterfazGrafica().setVisible(true);
+                        new InterfazGrafica_Funcionario().setVisible(true);
                     }
                 });
             } else {
