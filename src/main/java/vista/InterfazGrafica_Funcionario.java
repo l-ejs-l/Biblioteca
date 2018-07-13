@@ -11,14 +11,14 @@ import javax.swing.*;
 /**
  * @author claus
  */
-public class InterfazGrafica extends javax.swing.JFrame {
+public class InterfazGrafica_Funcionario extends javax.swing.JFrame {
 
     ArrayList<JPanel> listaComponentes = new ArrayList<>();
 
     /**
      * Creates new form Aplicacion
      */
-    public InterfazGrafica() {
+    public InterfazGrafica_Funcionario() {
         initComponents();
         initComponentsList();
         setVisibleComponent(pnlIngresoMaterial);
@@ -1474,14 +1474,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InterfazGrafica_Funcionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -1490,7 +1494,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazGrafica().setVisible(true);
+                new InterfazGrafica_Funcionario().setVisible(true);
             }
         });
     }
