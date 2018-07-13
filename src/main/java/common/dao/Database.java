@@ -13,9 +13,9 @@ public class Database {
     private static Connection CONNECTION = null;
 
     private static final String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private static final String DATABASE_URL = "jdbc:mysql://192.168.1.34:3306/biblioteca";
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "papalapa123";
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/biblioteca";
+    private static final String USERNAME = "biblioteca";
+    private static final String PASSWORD = "biblioteca";
     private static final String MAX_POOL = "250";
 
     private Database() {

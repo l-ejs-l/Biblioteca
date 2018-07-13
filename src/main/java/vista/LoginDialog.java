@@ -39,23 +39,37 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
 
         JLabel lblUsername = new JLabel("Usuario");
         lblUsername.setFont(new Font("Tahoma", Font.BOLD, 13));
-        GridBagConstraints gbc_lblUsername = new GridBagConstraints();
-        gbc_lblUsername.insets = new Insets(0, 0, 5, 5);
-        gbc_lblUsername.anchor = GridBagConstraints.EAST;
-        gbc_lblUsername.gridx = 2;
-        gbc_lblUsername.gridy = 1;
-        contentPanel.add(lblUsername, gbc_lblUsername);
+        GridBagConstraints grigBagUsername = new GridBagConstraints();
+        grigBagUsername.insets = new Insets(0, 0, 5, 5);
+        grigBagUsername.anchor = GridBagConstraints.EAST;
+        grigBagUsername.gridx = 2;
+        grigBagUsername.gridy = 1;
+        contentPanel.add(lblUsername, grigBagUsername);
 
 
         textField = new JTextField();
-        GridBagConstraints gbc_textField = new GridBagConstraints();
-        gbc_textField.insets = new Insets(0, 0, 5, 5);
-        gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-        gbc_textField.gridx = 4;
-        gbc_textField.gridy = 1;
-        contentPanel.add(textField, gbc_textField);
+        GridBagConstraints grigBagTextField = new GridBagConstraints();
+        grigBagTextField.insets = new Insets(0, 0, 5, 5);
+        grigBagTextField.fill = GridBagConstraints.HORIZONTAL;
+        grigBagTextField.gridx = 4;
+        grigBagTextField.gridy = 1;
+        contentPanel.add(textField, grigBagTextField);
         textField.setColumns(10);
+/*
+        JLabel lblUsername = new JLabel("Usuario");
+        JLabel lblUsername = new JLabel("Usuario");
+        JLabel lblUsername = new JLabel("Usuario");
+        JLabel lblUsername = new JLabel("Usuario");
 
+        id_usuario,
+            nombre,
+            usuario,
+            clave,
+            es_miembro,
+            apellido,
+            correo,
+            cod_sucursal,
+            activo*/
 
         JLabel lblPassword = new JLabel("Clave");
         lblPassword.setFont(new Font("Tahoma", Font.BOLD, 13));

@@ -130,13 +130,13 @@ public class FreeRegistrationDialog extends JDialog {
 
             private boolean ValidateRequiredField(String name, char[] pass, char[] cpass) { //validate username, pass, confirm pass
                 if (reqlistener == null) {
-                    System.out.println("uh oh reqlistener is null");
+                    System.out.println("Usuario o Clave sin registrar");
                     return false;
                 } else {
-                    Usuario cuenta = new Usuario(name, new String(pass), false);
-                    reqlistener.requestAccountEventOccurred(new RequestAccountEvent(this, cuenta));
+                    Usuario usuario = new Usuario(name, new String(pass), false);
+                    reqlistener.requestAccountEventOccurred(new RequestAccountEvent(this, usuario));
                     if (accountTaken) {
-                        JOptionPane.showMessageDialog(null, "nombre is taken");
+                        JOptionPane.showMessageDialog(null, "Nombre asigando");
                         clearAllFields();
                         return false;
                     }
@@ -313,9 +313,11 @@ public class FreeRegistrationDialog extends JDialog {
     public void setRequestAccountEventListener(RequestAccountEventListener listener) {
 
         this.reqlistener = listener;
-        System.out.println("when is this being called");
+        System.out.println("\n" +
+            "RequestAccountEventListener");
         if (this.reqlistener == null) {
-            System.out.println("is this being set?");
+            System.out.println("\n" +
+                "reqlistener");
         }
     }
 
