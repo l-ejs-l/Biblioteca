@@ -79,13 +79,13 @@ public class LibroDAOImpl implements LibroDAO {
             int update = statement.executeUpdate();
 
             if (update == 0) {
-                throw new Exception("No se insertó ninguna libro");
+                throw new Exception("No se insertó ningun libro");
             }
 
             connection.commit();
         } catch (SQLException e) {
             connection.rollback();
-            System.out.println("SQL Exception in save()");
+            System.out.println("SQLException in LibroDAO.save()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
