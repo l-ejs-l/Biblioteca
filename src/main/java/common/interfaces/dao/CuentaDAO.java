@@ -1,6 +1,7 @@
 package common.interfaces.dao;
 
 import common.dominios.Cuenta;
+import common.interfaces.dao.base.DAO;
 
 /**
  * Interfaz extiende de DAO y contiene declaracion de metodos para mantener entidad Cuenta
