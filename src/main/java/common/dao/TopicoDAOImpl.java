@@ -28,7 +28,7 @@ public class TopicoDAOImpl implements TopicoDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Topico find(int id) throws Exception {
+    public Topico findById(int id) throws Exception {
 
         try {
             connection = Database.getConnection();
@@ -43,7 +43,7 @@ public class TopicoDAOImpl implements TopicoDAO {
             throw new Exception("No se encontró ningun topico con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in TopicoDAO.find()");
+            System.out.println("SQLException in TopicoDAO.findById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }

@@ -5,7 +5,7 @@ package common.interfaces.dao.base;
  *
  * @param <T> Tipo de entidad a implementar
  */
-public interface FindByNameDAO<T> {
+public interface FindByEntityName<T> {
 
     /**
      * Realiza la busquda en la DB de una entidade <T> con el nombre especificado

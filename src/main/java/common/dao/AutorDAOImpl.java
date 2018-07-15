@@ -28,7 +28,7 @@ public class AutorDAOImpl implements AutorDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Autor find(int id) throws Exception {
+    public Autor findById(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_AUTOR_BY_ID);
@@ -42,7 +42,7 @@ public class AutorDAOImpl implements AutorDAO {
             throw new Exception("No se encontró ningun autor con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in AutorDAO.find()");
+            System.out.println("SQLException in AutorDAO.findById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }

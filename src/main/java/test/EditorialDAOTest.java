@@ -25,7 +25,7 @@ public class EditorialDAOTest {
             System.out.println("Editorial Insertada correctamente");
             Editorial editorialToDelete = dao.findByName("asd");
             System.out.println("Encontre la editorial por nombre");
-            dao.find(editorialToDelete.getId());
+            dao.findById(editorialToDelete.getId());
             System.out.println("Encontre la editorial por id");
             editorialToDelete.setEditorial("Modificada");
             dao.update(editorialToDelete);

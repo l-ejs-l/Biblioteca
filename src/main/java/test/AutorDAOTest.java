@@ -30,7 +30,7 @@ public class AutorDAOTest {
             System.out.println("Autor ingresado");
             Autor autorToDelete = dao.findByName(autor3.getNombre(), autor3.getApellido());
             System.out.println("Encontrado Autor por nombre");
-            Autor findById = dao.find(autorToDelete.getId());
+            Autor findById = dao.findById(autorToDelete.getId());
             System.out.println("Encontrado autor por id");
             autorToDelete.setNombre("Modificado");
             dao.update(autorToDelete);

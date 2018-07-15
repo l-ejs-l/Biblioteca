@@ -27,7 +27,7 @@ public class TopicoDAOTest {
 
             Topico topicoToDelete = dao.findByName("Aventura");
             System.out.println("Encontre el topico aventura por nombre");
-            Topico topicoToFindById = dao.find(topicoToDelete.getId());
+            Topico topicoToFindById = dao.findById(topicoToDelete.getId());
             System.out.println("Encontre el topico aventura por id");
             topicoToDelete.setTopico("Modificado");
             dao.update(topicoToDelete);

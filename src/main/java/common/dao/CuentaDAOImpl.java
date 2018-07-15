@@ -24,7 +24,7 @@ public class CuentaDAOImpl implements CuentaDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Cuenta find(int id) throws Exception {
+    public Cuenta findById(int id) throws Exception {
         return null;
     }
 

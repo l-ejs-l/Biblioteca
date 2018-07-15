@@ -28,7 +28,7 @@ public class EditorialDAOImpl implements EditorialDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Editorial find(int id) throws Exception {
+    public Editorial findById(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_EDITORIAL_BY_ID);
@@ -42,7 +42,7 @@ public class EditorialDAOImpl implements EditorialDAO {
             throw new Exception("No se encontró ninguna editorial con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in EditorialDAO.find()");
+            System.out.println("SQLException in EditorialDAO.findById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
@@ -147,7 +147,7 @@ public class EditorialDAOImpl implements EditorialDAO {
             throw new Exception("No se encontró una Editorial con el nombre indicado");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in EditorialDAO.find()");
+            System.out.println("SQLException in EditorialDAO.findById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
