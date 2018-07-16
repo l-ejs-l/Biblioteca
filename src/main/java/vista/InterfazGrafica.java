@@ -32,6 +32,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         listaComponentes.add(pnlRegistroPrestamos);
         listaComponentes.add(pnlDevolucionMultas);
         listaComponentes.add(pnlIngresoMaterial);
+        
+        listaComponentes.add(pnl_Administrador1);
+        listaComponentes.add(pnl_Administrador2);
     }
 
     /**
@@ -144,6 +147,104 @@ public class InterfazGrafica extends javax.swing.JFrame {
         tblPrecios6 = new javax.swing.JTable();
         btnInsertar18 = new javax.swing.JButton();
         btnInsertar19 = new javax.swing.JButton();
+        pnl_Administrador1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        txt_Registrar_IdUsuario_Admin = new javax.swing.JTextField();
+        txt_Registrar_Nombre_Admin = new javax.swing.JTextField();
+        btn_Registrar_Registar_Admin = new javax.swing.JButton();
+        btn_Registrar_Actualizar_Admin = new javax.swing.JButton();
+        btn_Registrar_LimpiarCampos_Admin = new javax.swing.JButton();
+        btn_Listar_ListarUsuarios_Admin = new javax.swing.JButton();
+        btn_Registrar_Eliminar_Admin = new javax.swing.JButton();
+        rbt_Registrar_Rol_Docente_Admin = new javax.swing.JRadioButton();
+        rbt_Registrar_Rol_Estudiante_Admin = new javax.swing.JRadioButton();
+        jLabel64 = new javax.swing.JLabel();
+        btn_TareaAdministrativa1 = new javax.swing.JButton();
+        jLabel73 = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tbl_Listar_ListarUsuarios_Admin = new javax.swing.JTable();
+        btn_Listar_Actualizar_Admin = new javax.swing.JButton();
+        btn_Listar_Borrar_Admin = new javax.swing.JButton();
+        jLabel48 = new javax.swing.JLabel();
+        txt_Registrar_ApellidoPaterno_Admin = new javax.swing.JTextField();
+        jLabel52 = new javax.swing.JLabel();
+        txt_Registrar_ApellidoMaterno_Admin = new javax.swing.JTextField();
+        btn_TareaAdministrativa2 = new javax.swing.JButton();
+        btn_TareaAdministrativa4 = new javax.swing.JButton();
+        btn_TareaAdministrativa3 = new javax.swing.JButton();
+        pnl_Administrador2 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        tbl_OrdenesCompra_ListaOrdenes_Admin = new javax.swing.JTable();
+        btn_OrdenesCompra_Ingresar_Admin = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        txt_OrdenesCompra_Topico_Admin = new javax.swing.JTextField();
+        btn_OrdenesCompra_Listar_Admin = new javax.swing.JButton();
+        btn_OrdenesCompra_Actualizar_Admin = new javax.swing.JButton();
+        txt_OrdenesCompra_Proveedor_Admin = new javax.swing.JTextField();
+        txt_OrdenesCompra_IdMaterial_Admin = new javax.swing.JTextField();
+        txt_OrdenesCompra_Categoria_Admin = new javax.swing.JTextField();
+        btn_OrdenesCompra_Borrar_Admin = new javax.swing.JButton();
+        btn_OrdenesCompra_LimpiarCampos_Admin = new javax.swing.JButton();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        btn_Bibliotecas_Ingresar_Admin = new javax.swing.JButton();
+        btn_Bibliotecas_Borrar_Admin = new javax.swing.JButton();
+        btn_Bibliotecas_LimpiarCampos_Admin = new javax.swing.JButton();
+        btn_Bibliotecas_Listar_Admin = new javax.swing.JButton();
+        btn_Bibliotecas_Actualizar_Admin = new javax.swing.JButton();
+        txt_Bibliotecas_Telefono_Admin = new javax.swing.JTextField();
+        txt_Bibliotecas_Direccion_Admin = new javax.swing.JTextField();
+        txt_Bibliotecas_Nombre_Admin = new javax.swing.JTextField();
+        txt_Bibliotecas_IdBiblioteca_Admin = new javax.swing.JTextField();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        tbl_Bibliotecas_ListarBibliotecas_Admin = new javax.swing.JTable();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        tbl_Proveedores_ListaProveedores_Admin = new javax.swing.JTable();
+        btn_Proveedores_Actualizar_Admin = new javax.swing.JButton();
+        btn_Proveedores_Listar_Admin = new javax.swing.JButton();
+        btn_Proveedores_Ingresar_Admin = new javax.swing.JButton();
+        btn_Proveedores_Borrar_Admin = new javax.swing.JButton();
+        btn_Proveedores_LimpiarCampos_Admin = new javax.swing.JButton();
+        txt_Proveedores_Telefono_Admin = new javax.swing.JTextField();
+        txt_Proveedores_Direccion_Admin = new javax.swing.JTextField();
+        txt_Proveedores_Nombre_Admin = new javax.swing.JTextField();
+        txt_Proveedores_IdProveedor_Admin = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        btn_Facturas_Borrar_Admin = new javax.swing.JButton();
+        btn_Facturas_LimpiarCampos_Admin = new javax.swing.JButton();
+        btn_Facturas_Ingresar_Admin = new javax.swing.JButton();
+        btn_Facturas_Listar_Admin = new javax.swing.JButton();
+        btn_Facturas_Actualizar_Admin = new javax.swing.JButton();
+        txt_Facturas_Costo_Admin = new javax.swing.JTextField();
+        txt_Facturas_Cantidad_Admin = new javax.swing.JTextField();
+        txt_Facturas_Proveedor_Admin = new javax.swing.JTextField();
+        txt_Facturas_IdFactura_Admin = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        tbl_Facturas_ListaFacturas_Admin = new javax.swing.JTable();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mniDatosCliente = new javax.swing.JMenuItem();
@@ -962,6 +1063,892 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        pnl_Administrador1.setBackground(new java.awt.Color(255, 204, 102));
+
+        jLabel11.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel11.setText("Nombre:");
+
+        jLabel22.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel22.setText("Registrar Usuario");
+
+        jLabel70.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel70.setText("Otras Tareas Administrativas");
+
+        jLabel47.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel47.setText("Id Usuario:");
+
+        btn_Registrar_Registar_Admin.setText("Registrar");
+        btn_Registrar_Registar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Registrar_Registar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Registrar_Actualizar_Admin.setText("Actualizar");
+        btn_Registrar_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Registrar_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Registrar_LimpiarCampos_Admin.setText("Limpiar  Campos");
+        btn_Registrar_LimpiarCampos_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Registrar_LimpiarCampos_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Listar_ListarUsuarios_Admin.setText("Listar Usuarios");
+        btn_Listar_ListarUsuarios_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Listar_ListarUsuarios_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Registrar_Eliminar_Admin.setText("Eliminar");
+        btn_Registrar_Eliminar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Registrar_Eliminar_AdminActionPerformed(evt);
+            }
+        });
+
+        rbt_Registrar_Rol_Docente_Admin.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rbt_Registrar_Rol_Docente_Admin.setText("Docente");
+        rbt_Registrar_Rol_Docente_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbt_Registrar_Rol_Docente_AdminActionPerformed(evt);
+            }
+        });
+
+        rbt_Registrar_Rol_Estudiante_Admin.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        rbt_Registrar_Rol_Estudiante_Admin.setText("Estudiante");
+        rbt_Registrar_Rol_Estudiante_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbt_Registrar_Rol_Estudiante_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel64.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel64.setText("Rol:");
+
+        btn_TareaAdministrativa1.setText("Tarea Administrativa 1");
+        btn_TareaAdministrativa1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TareaAdministrativa1ActionPerformed(evt);
+            }
+        });
+
+        jLabel73.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel73.setText("Listar Usuarios");
+
+        tbl_Listar_ListarUsuarios_Admin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "Nombre", "Apellido Paterno", "Apellido Materno", "Rol"
+            }
+        ));
+        jScrollPane6.setViewportView(tbl_Listar_ListarUsuarios_Admin);
+
+        btn_Listar_Actualizar_Admin.setText("Actualizar");
+        btn_Listar_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Listar_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Listar_Borrar_Admin.setText("Borrar");
+        btn_Listar_Borrar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Listar_Borrar_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel48.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel48.setText("Apellido Paterno:");
+
+        jLabel52.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel52.setText("Apellido Materno:");
+
+        btn_TareaAdministrativa2.setText("Tarea Administrativa 2");
+        btn_TareaAdministrativa2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TareaAdministrativa2ActionPerformed(evt);
+            }
+        });
+
+        btn_TareaAdministrativa4.setText("Tarea Administrativa 4");
+        btn_TareaAdministrativa4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TareaAdministrativa4ActionPerformed(evt);
+            }
+        });
+
+        btn_TareaAdministrativa3.setText("Tarea Administrativa 3");
+        btn_TareaAdministrativa3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_TareaAdministrativa3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_Administrador1Layout = new javax.swing.GroupLayout(pnl_Administrador1);
+        pnl_Administrador1.setLayout(pnl_Administrador1Layout);
+        pnl_Administrador1Layout.setHorizontalGroup(
+            pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Administrador1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(74, 74, 74))
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Administrador1Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel47))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txt_Registrar_Nombre_Admin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                                    .addComponent(txt_Registrar_IdUsuario_Admin, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel48)
+                                    .addComponent(jLabel52))
+                                .addGap(12, 12, 12)
+                                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_Registrar_ApellidoPaterno_Admin)
+                                    .addComponent(txt_Registrar_ApellidoMaterno_Admin)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Administrador1Layout.createSequentialGroup()
+                                .addComponent(btn_Registrar_Registar_Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(97, 97, 97)))
+                        .addGap(24, 24, 24))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Administrador1Layout.createSequentialGroup()
+                        .addComponent(jLabel64)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(rbt_Registrar_Rol_Estudiante_Admin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rbt_Registrar_Rol_Docente_Admin)
+                        .addGap(18, 18, 18))
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_Registrar_Actualizar_Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_Registrar_Eliminar_Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_Registrar_LimpiarCampos_Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(121, 121, 121)))
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addComponent(btn_TareaAdministrativa3, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_TareaAdministrativa4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addComponent(btn_Listar_ListarUsuarios_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Listar_Actualizar_Admin)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Listar_Borrar_Admin))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel73, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_Administrador1Layout.createSequentialGroup()
+                            .addComponent(btn_TareaAdministrativa1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btn_TareaAdministrativa2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        pnl_Administrador1Layout.setVerticalGroup(
+            pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel22))
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_Listar_ListarUsuarios_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Listar_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_Listar_Borrar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(rbt_Registrar_Rol_Estudiante_Admin)
+                            .addComponent(rbt_Registrar_Rol_Docente_Admin)
+                            .addComponent(jLabel64)))
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                                .addComponent(txt_Registrar_IdUsuario_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txt_Registrar_Nombre_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                                .addComponent(jLabel47)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel11)))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_Registrar_ApellidoPaterno_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel48))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_Registrar_ApellidoMaterno_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel52))))
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel70)
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn_TareaAdministrativa1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_TareaAdministrativa2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnl_Administrador1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(btn_Registrar_Registar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_Registrar_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_Registrar_Eliminar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_TareaAdministrativa3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_TareaAdministrativa4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_Registrar_LimpiarCampos_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 11, Short.MAX_VALUE))
+        );
+
+        pnl_Administrador2.setBackground(new java.awt.Color(255, 204, 102));
+
+        jLabel15.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel15.setText("Tópico de Estudio:");
+
+        jLabel28.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel28.setText("Lista de Ordenes");
+
+        jLabel53.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel53.setText("Id del Material:");
+
+        tbl_OrdenesCompra_ListaOrdenes_Admin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id Orden", "Biblioteca", "Título", "Cantidad"
+            }
+        ));
+        jScrollPane13.setViewportView(tbl_OrdenesCompra_ListaOrdenes_Admin);
+
+        btn_OrdenesCompra_Ingresar_Admin.setText("Ingresar");
+        btn_OrdenesCompra_Ingresar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrdenesCompra_Ingresar_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel16.setText("Categoría:");
+
+        jLabel54.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel54.setText("Proveedor:");
+
+        btn_OrdenesCompra_Listar_Admin.setText("Listar");
+        btn_OrdenesCompra_Listar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrdenesCompra_Listar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_OrdenesCompra_Actualizar_Admin.setText("Actualizar");
+        btn_OrdenesCompra_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrdenesCompra_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_OrdenesCompra_Borrar_Admin.setText("Borrar");
+        btn_OrdenesCompra_Borrar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrdenesCompra_Borrar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_OrdenesCompra_LimpiarCampos_Admin.setText("Limpiar Campos");
+        btn_OrdenesCompra_LimpiarCampos_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_OrdenesCompra_LimpiarCampos_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel29.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel29.setText("Registros Generales");
+
+        jLabel30.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel30.setText("Bibliotecas");
+
+        jLabel55.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel55.setText("Id Biblioteca:");
+
+        jLabel17.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel17.setText("Nombre:");
+
+        jLabel56.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel56.setText("Dirección:");
+
+        jLabel18.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel18.setText("Teléfono:");
+
+        btn_Bibliotecas_Ingresar_Admin.setText("Ingresar");
+        btn_Bibliotecas_Ingresar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Bibliotecas_Ingresar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Bibliotecas_Borrar_Admin.setText("Borrar");
+        btn_Bibliotecas_Borrar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Bibliotecas_Borrar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Bibliotecas_LimpiarCampos_Admin.setText("Limpiar Campos");
+        btn_Bibliotecas_LimpiarCampos_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Bibliotecas_LimpiarCampos_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Bibliotecas_Listar_Admin.setText("Listar");
+        btn_Bibliotecas_Listar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Bibliotecas_Listar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Bibliotecas_Actualizar_Admin.setText("Actualizar");
+        btn_Bibliotecas_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Bibliotecas_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        tbl_Bibliotecas_ListarBibliotecas_Admin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id Biblioteca", "Nombre", "Dirección", "Teléfono"
+            }
+        ));
+        jScrollPane14.setViewportView(tbl_Bibliotecas_ListarBibliotecas_Admin);
+
+        tbl_Proveedores_ListaProveedores_Admin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id Proveedor", "Nombre", "Dirección", "Teléfono"
+            }
+        ));
+        jScrollPane15.setViewportView(tbl_Proveedores_ListaProveedores_Admin);
+
+        btn_Proveedores_Actualizar_Admin.setText("Actualizar");
+        btn_Proveedores_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Proveedores_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Proveedores_Listar_Admin.setText("Listar");
+        btn_Proveedores_Listar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Proveedores_Listar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Proveedores_Ingresar_Admin.setText("Ingresar");
+        btn_Proveedores_Ingresar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Proveedores_Ingresar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Proveedores_Borrar_Admin.setText("Borrar");
+        btn_Proveedores_Borrar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Proveedores_Borrar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Proveedores_LimpiarCampos_Admin.setText("Limpiar Campos");
+        btn_Proveedores_LimpiarCampos_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Proveedores_LimpiarCampos_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel19.setText("Teléfono:");
+
+        jLabel57.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel57.setText("Dirección:");
+
+        jLabel20.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel20.setText("Nombre:");
+
+        jLabel58.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel58.setText("Id Proveedor:");
+
+        jLabel31.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel31.setText("Lista de Proveedores");
+
+        btn_Facturas_Borrar_Admin.setText("Borrar");
+        btn_Facturas_Borrar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Facturas_Borrar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Facturas_LimpiarCampos_Admin.setText("Limpiar Campos");
+        btn_Facturas_LimpiarCampos_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Facturas_LimpiarCampos_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Facturas_Ingresar_Admin.setText("Ingresar");
+        btn_Facturas_Ingresar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Facturas_Ingresar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Facturas_Listar_Admin.setText("Listar");
+        btn_Facturas_Listar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Facturas_Listar_AdminActionPerformed(evt);
+            }
+        });
+
+        btn_Facturas_Actualizar_Admin.setText("Actualizar");
+        btn_Facturas_Actualizar_Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Facturas_Actualizar_AdminActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel23.setText("Costo $:");
+
+        jLabel65.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel65.setText("Cantidad:");
+
+        jLabel25.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel25.setText("Proveedor:");
+
+        jLabel66.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jLabel66.setText("Id Factura:");
+
+        jLabel32.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel32.setText("Facturas");
+
+        tbl_Facturas_ListaFacturas_Admin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Id Factura", "Proveedor", "Cantidad", "Costo $"
+            }
+        ));
+        jScrollPane16.setViewportView(tbl_Facturas_ListaFacturas_Admin);
+
+        jLabel33.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel33.setText("Ordenes de Compra ");
+
+        jLabel34.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel34.setText("Lista de Facturas");
+
+        jLabel35.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel35.setText("Lista de Bibliotecas");
+
+        jLabel36.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel36.setText("Proveedores");
+
+        javax.swing.GroupLayout pnl_Administrador2Layout = new javax.swing.GroupLayout(pnl_Administrador2);
+        pnl_Administrador2.setLayout(pnl_Administrador2Layout);
+        pnl_Administrador2Layout.setHorizontalGroup(
+            pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel54)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel53))
+                                .addGap(18, 18, 18)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_OrdenesCompra_Proveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_OrdenesCompra_Topico_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_OrdenesCompra_IdMaterial_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_OrdenesCompra_Categoria_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addComponent(btn_OrdenesCompra_Ingresar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_OrdenesCompra_Listar_Admin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_OrdenesCompra_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addComponent(btn_OrdenesCompra_Borrar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_OrdenesCompra_LimpiarCampos_Admin))
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGap(9, 9, 9)
+                                .addComponent(jLabel33)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel28))
+                        .addGap(21, 21, 21)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel56)
+                                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel17)
+                                            .addComponent(jLabel55))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txt_Bibliotecas_Direccion_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Bibliotecas_Nombre_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Bibliotecas_IdBiblioteca_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Bibliotecas_Telefono_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel30)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                            .addComponent(btn_Bibliotecas_Ingresar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btn_Bibliotecas_Listar_Admin)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btn_Bibliotecas_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                            .addComponent(btn_Bibliotecas_Borrar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(btn_Bibliotecas_LimpiarCampos_Admin))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel35))
+                                .addGap(62, 62, 62))
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel19)
+                                    .addComponent(jLabel57)
+                                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel20)
+                                            .addComponent(jLabel58))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txt_Proveedores_Direccion_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Proveedores_Nombre_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Proveedores_IdProveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txt_Proveedores_Telefono_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                        .addComponent(btn_Proveedores_Borrar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_Proveedores_LimpiarCampos_Admin))
+                                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                                .addComponent(btn_Proveedores_Ingresar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn_Proveedores_Listar_Admin)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn_Proveedores_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jLabel36))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel31)
+                                            .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel65)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel25)
+                                    .addComponent(jLabel66))
+                                .addGap(18, 18, 18)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_Facturas_Cantidad_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Facturas_Proveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Facturas_IdFactura_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txt_Facturas_Costo_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel32)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addComponent(btn_Facturas_Ingresar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Facturas_Listar_Admin)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Facturas_Actualizar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addComponent(btn_Facturas_Borrar_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_Facturas_LimpiarCampos_Admin)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel34))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnl_Administrador2Layout.setVerticalGroup(
+            pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel29)
+                .addGap(22, 22, 22)
+                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel28)
+                            .addComponent(jLabel33))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel53)
+                                    .addComponent(txt_OrdenesCompra_IdMaterial_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel15)
+                                    .addComponent(txt_OrdenesCompra_Topico_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel54)
+                                    .addComponent(txt_OrdenesCompra_Proveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel16)
+                                    .addComponent(txt_OrdenesCompra_Categoria_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_OrdenesCompra_Ingresar_Admin)
+                                    .addComponent(btn_OrdenesCompra_Listar_Admin)
+                                    .addComponent(btn_OrdenesCompra_Actualizar_Admin))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_OrdenesCompra_Borrar_Admin)
+                                    .addComponent(btn_OrdenesCompra_LimpiarCampos_Admin))))
+                        .addGap(52, 52, 52))
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel30)
+                            .addComponent(jLabel35))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel55)
+                                    .addComponent(txt_Bibliotecas_IdBiblioteca_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel17)
+                                    .addComponent(txt_Bibliotecas_Nombre_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel56)
+                                    .addComponent(txt_Bibliotecas_Direccion_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel18)
+                                    .addComponent(txt_Bibliotecas_Telefono_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Bibliotecas_Ingresar_Admin)
+                                    .addComponent(btn_Bibliotecas_Listar_Admin)
+                                    .addComponent(btn_Bibliotecas_Actualizar_Admin))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Bibliotecas_Borrar_Admin)
+                                    .addComponent(btn_Bibliotecas_LimpiarCampos_Admin))))
+                        .addGap(53, 53, 53)))
+                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel34))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel66)
+                                    .addComponent(txt_Facturas_IdFactura_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel25)
+                                    .addComponent(txt_Facturas_Proveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel65)
+                                    .addComponent(txt_Facturas_Cantidad_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel23)
+                                    .addComponent(txt_Facturas_Costo_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Facturas_Ingresar_Admin)
+                                    .addComponent(btn_Facturas_Listar_Admin)
+                                    .addComponent(btn_Facturas_Actualizar_Admin))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Facturas_Borrar_Admin)
+                                    .addComponent(btn_Facturas_LimpiarCampos_Admin)))))
+                    .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel31)
+                            .addComponent(jLabel36))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_Administrador2Layout.createSequentialGroup()
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel58)
+                                    .addComponent(txt_Proveedores_IdProveedor_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel20)
+                                    .addComponent(txt_Proveedores_Nombre_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel57)
+                                    .addComponent(txt_Proveedores_Direccion_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel19)
+                                    .addComponent(txt_Proveedores_Telefono_Admin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Proveedores_Ingresar_Admin)
+                                    .addComponent(btn_Proveedores_Listar_Admin)
+                                    .addComponent(btn_Proveedores_Actualizar_Admin))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(pnl_Administrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_Proveedores_Borrar_Admin)
+                                    .addComponent(btn_Proveedores_LimpiarCampos_Admin))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(46, 46, 46))
+        );
+
         jMenuBar1.setAlignmentX(0.0F);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -1053,22 +2040,30 @@ public class InterfazGrafica extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pnl_Administrador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pnl_Administrador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_Administrador1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnl_Administrador2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         pack();
@@ -1218,11 +2213,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void mniProcesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProcesoActionPerformed
         // TODO add your handling code here:
-       
+       setVisibleComponent(pnl_Administrador1);
     }//GEN-LAST:event_mniProcesoActionPerformed
 
     private void mniProceso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProceso1ActionPerformed
         // TODO add your handling code here:
+        setVisibleComponent(pnl_Administrador2);
     }//GEN-LAST:event_mniProceso1ActionPerformed
 
     private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
@@ -1233,6 +2229,138 @@ public class InterfazGrafica extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_mnSalirActionPerformed
+
+    private void btn_Registrar_Registar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Registrar_Registar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Registrar_Registar_AdminActionPerformed
+
+    private void btn_Registrar_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Registrar_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Registrar_Actualizar_AdminActionPerformed
+
+    private void btn_Registrar_LimpiarCampos_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Registrar_LimpiarCampos_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Registrar_LimpiarCampos_AdminActionPerformed
+
+    private void btn_Listar_ListarUsuarios_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Listar_ListarUsuarios_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Listar_ListarUsuarios_AdminActionPerformed
+
+    private void btn_Registrar_Eliminar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Registrar_Eliminar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Registrar_Eliminar_AdminActionPerformed
+
+    private void rbt_Registrar_Rol_Docente_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_Registrar_Rol_Docente_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbt_Registrar_Rol_Docente_AdminActionPerformed
+
+    private void rbt_Registrar_Rol_Estudiante_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbt_Registrar_Rol_Estudiante_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbt_Registrar_Rol_Estudiante_AdminActionPerformed
+
+    private void btn_TareaAdministrativa1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TareaAdministrativa1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_TareaAdministrativa1ActionPerformed
+
+    private void btn_Listar_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Listar_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Listar_Actualizar_AdminActionPerformed
+
+    private void btn_Listar_Borrar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Listar_Borrar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Listar_Borrar_AdminActionPerformed
+
+    private void btn_TareaAdministrativa2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TareaAdministrativa2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_TareaAdministrativa2ActionPerformed
+
+    private void btn_TareaAdministrativa4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TareaAdministrativa4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_TareaAdministrativa4ActionPerformed
+
+    private void btn_TareaAdministrativa3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_TareaAdministrativa3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_TareaAdministrativa3ActionPerformed
+
+    private void btn_OrdenesCompra_Ingresar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrdenesCompra_Ingresar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_OrdenesCompra_Ingresar_AdminActionPerformed
+
+    private void btn_OrdenesCompra_Listar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrdenesCompra_Listar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_OrdenesCompra_Listar_AdminActionPerformed
+
+    private void btn_OrdenesCompra_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrdenesCompra_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_OrdenesCompra_Actualizar_AdminActionPerformed
+
+    private void btn_OrdenesCompra_Borrar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrdenesCompra_Borrar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_OrdenesCompra_Borrar_AdminActionPerformed
+
+    private void btn_OrdenesCompra_LimpiarCampos_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_OrdenesCompra_LimpiarCampos_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_OrdenesCompra_LimpiarCampos_AdminActionPerformed
+
+    private void btn_Bibliotecas_Ingresar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Bibliotecas_Ingresar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Bibliotecas_Ingresar_AdminActionPerformed
+
+    private void btn_Bibliotecas_Borrar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Bibliotecas_Borrar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Bibliotecas_Borrar_AdminActionPerformed
+
+    private void btn_Bibliotecas_LimpiarCampos_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Bibliotecas_LimpiarCampos_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Bibliotecas_LimpiarCampos_AdminActionPerformed
+
+    private void btn_Bibliotecas_Listar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Bibliotecas_Listar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Bibliotecas_Listar_AdminActionPerformed
+
+    private void btn_Bibliotecas_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Bibliotecas_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Bibliotecas_Actualizar_AdminActionPerformed
+
+    private void btn_Proveedores_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Proveedores_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Proveedores_Actualizar_AdminActionPerformed
+
+    private void btn_Proveedores_Listar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Proveedores_Listar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Proveedores_Listar_AdminActionPerformed
+
+    private void btn_Proveedores_Ingresar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Proveedores_Ingresar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Proveedores_Ingresar_AdminActionPerformed
+
+    private void btn_Proveedores_Borrar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Proveedores_Borrar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Proveedores_Borrar_AdminActionPerformed
+
+    private void btn_Proveedores_LimpiarCampos_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Proveedores_LimpiarCampos_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Proveedores_LimpiarCampos_AdminActionPerformed
+
+    private void btn_Facturas_Borrar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Facturas_Borrar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Facturas_Borrar_AdminActionPerformed
+
+    private void btn_Facturas_LimpiarCampos_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Facturas_LimpiarCampos_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Facturas_LimpiarCampos_AdminActionPerformed
+
+    private void btn_Facturas_Ingresar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Facturas_Ingresar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Facturas_Ingresar_AdminActionPerformed
+
+    private void btn_Facturas_Listar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Facturas_Listar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Facturas_Listar_AdminActionPerformed
+
+    private void btn_Facturas_Actualizar_AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Facturas_Actualizar_AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_Facturas_Actualizar_AdminActionPerformed
 
     public void limpiarControles() {
 
@@ -1282,48 +2410,112 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton btnInsertar19;
     private javax.swing.JButton btnInsertar9;
     private javax.swing.JButton btn_Actualizar_Multas_Usuarios_Func;
+    private javax.swing.JButton btn_Bibliotecas_Actualizar_Admin;
+    private javax.swing.JButton btn_Bibliotecas_Borrar_Admin;
+    private javax.swing.JButton btn_Bibliotecas_Ingresar_Admin;
+    private javax.swing.JButton btn_Bibliotecas_LimpiarCampos_Admin;
+    private javax.swing.JButton btn_Bibliotecas_Listar_Admin;
     private javax.swing.JButton btn_Borrar_Multas_Usuarios_Func;
     private javax.swing.JButton btn_Devolucion_Actualizar_Func;
     private javax.swing.JButton btn_Devolucion_Eliminar_Func;
     private javax.swing.JButton btn_Devolucion_Limpiar_Func;
     private javax.swing.JButton btn_Devolucion_Registrar_Func;
     private javax.swing.JButton btn_Devolucion_Renovar_Func;
+    private javax.swing.JButton btn_Facturas_Actualizar_Admin;
+    private javax.swing.JButton btn_Facturas_Borrar_Admin;
+    private javax.swing.JButton btn_Facturas_Ingresar_Admin;
+    private javax.swing.JButton btn_Facturas_LimpiarCampos_Admin;
+    private javax.swing.JButton btn_Facturas_Listar_Admin;
     private javax.swing.JButton btn_Listar_ActualizarMultas_Func;
     private javax.swing.JButton btn_Listar_ActualizarPrestamos_Func;
+    private javax.swing.JButton btn_Listar_Actualizar_Admin;
     private javax.swing.JButton btn_Listar_BorrarMultas_Func;
     private javax.swing.JButton btn_Listar_BorrarPrestamos_Func;
+    private javax.swing.JButton btn_Listar_Borrar_Admin;
     private javax.swing.JButton btn_Listar_ListarMultas_Func;
     private javax.swing.JButton btn_Listar_ListarPrestamos_Func;
+    private javax.swing.JButton btn_Listar_ListarUsuarios_Admin;
     private javax.swing.JButton btn_Listar_Multas_Usuarios_Func;
+    private javax.swing.JButton btn_OrdenesCompra_Actualizar_Admin;
+    private javax.swing.JButton btn_OrdenesCompra_Borrar_Admin;
+    private javax.swing.JButton btn_OrdenesCompra_Ingresar_Admin;
+    private javax.swing.JButton btn_OrdenesCompra_LimpiarCampos_Admin;
+    private javax.swing.JButton btn_OrdenesCompra_Listar_Admin;
+    private javax.swing.JButton btn_Proveedores_Actualizar_Admin;
+    private javax.swing.JButton btn_Proveedores_Borrar_Admin;
+    private javax.swing.JButton btn_Proveedores_Ingresar_Admin;
+    private javax.swing.JButton btn_Proveedores_LimpiarCampos_Admin;
+    private javax.swing.JButton btn_Proveedores_Listar_Admin;
     private javax.swing.JButton btn_RegistrarMaterial_Ingresar_Func;
+    private javax.swing.JButton btn_Registrar_Actualizar_Admin;
     private javax.swing.JButton btn_Registrar_Actualizar_Func;
+    private javax.swing.JButton btn_Registrar_Eliminar_Admin;
     private javax.swing.JButton btn_Registrar_Eliminar_Func;
+    private javax.swing.JButton btn_Registrar_LimpiarCampos_Admin;
     private javax.swing.JButton btn_Registrar_LimpiarCampos_Func;
+    private javax.swing.JButton btn_Registrar_Registar_Admin;
     private javax.swing.JButton btn_Registrar_Registrar_Func;
     private javax.swing.JButton btn_Registrar_Renovar_Func;
+    private javax.swing.JButton btn_TareaAdministrativa1;
+    private javax.swing.JButton btn_TareaAdministrativa2;
+    private javax.swing.JButton btn_TareaAdministrativa3;
+    private javax.swing.JButton btn_TareaAdministrativa4;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
@@ -1335,8 +2527,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
     private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JMenuItem mnSalir;
     private javax.swing.JMenuItem mniDatosCliente;
     private javax.swing.JMenuItem mniOrden;
@@ -1346,28 +2543,57 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JPanel pnlDevolucionMultas;
     private javax.swing.JPanel pnlIngresoMaterial;
     private javax.swing.JPanel pnlRegistroPrestamos;
+    private javax.swing.JPanel pnl_Administrador1;
+    private javax.swing.JPanel pnl_Administrador2;
     private javax.swing.JRadioButton rbtRolDocente_Func;
     private javax.swing.JRadioButton rbtRolEstudiante_Func;
     private javax.swing.JRadioButton rbt_Devolucion_RolDocente_Func;
     private javax.swing.JRadioButton rbt_Devolucion_RolEstududiante_Func;
+    private javax.swing.JRadioButton rbt_Registrar_Rol_Docente_Admin;
+    private javax.swing.JRadioButton rbt_Registrar_Rol_Estudiante_Admin;
     private javax.swing.JRadioButton rbttxt_RegistrarMaterial_AltaDemanda_Func;
     private javax.swing.JRadioButton rbttxt_RegistrarMaterial_ColeccionGeneral_Func;
     private javax.swing.JTable tblMultasUsuario;
     private javax.swing.JTable tblPrecios4;
     private javax.swing.JTable tblPrecios6;
+    private javax.swing.JTable tbl_Bibliotecas_ListarBibliotecas_Admin;
+    private javax.swing.JTable tbl_Facturas_ListaFacturas_Admin;
+    private javax.swing.JTable tbl_Listar_ListarUsuarios_Admin;
     private javax.swing.JTable tbl_Listar_Multas_Usuarios_Func;
     private javax.swing.JTable tbl_Listar_PrestamosUsuario_Func;
+    private javax.swing.JTable tbl_OrdenesCompra_ListaOrdenes_Admin;
+    private javax.swing.JTable tbl_Proveedores_ListaProveedores_Admin;
+    private javax.swing.JTextField txt_Bibliotecas_Direccion_Admin;
+    private javax.swing.JTextField txt_Bibliotecas_IdBiblioteca_Admin;
+    private javax.swing.JTextField txt_Bibliotecas_Nombre_Admin;
+    private javax.swing.JTextField txt_Bibliotecas_Telefono_Admin;
     private javax.swing.JTextField txt_Devolucion_ApellidoMaterno_Func;
     private javax.swing.JTextField txt_Devolucion_ApellidoPaterno_Func;
     private javax.swing.JTextField txt_Devolucion_IdUsuario_Func;
     private javax.swing.JTextField txt_Devolucion_Nombre_Func;
+    private javax.swing.JTextField txt_Facturas_Cantidad_Admin;
+    private javax.swing.JTextField txt_Facturas_Costo_Admin;
+    private javax.swing.JTextField txt_Facturas_IdFactura_Admin;
+    private javax.swing.JTextField txt_Facturas_Proveedor_Admin;
+    private javax.swing.JTextField txt_OrdenesCompra_Categoria_Admin;
+    private javax.swing.JTextField txt_OrdenesCompra_IdMaterial_Admin;
+    private javax.swing.JTextField txt_OrdenesCompra_Proveedor_Admin;
+    private javax.swing.JTextField txt_OrdenesCompra_Topico_Admin;
+    private javax.swing.JTextField txt_Proveedores_Direccion_Admin;
+    private javax.swing.JTextField txt_Proveedores_IdProveedor_Admin;
+    private javax.swing.JTextField txt_Proveedores_Nombre_Admin;
+    private javax.swing.JTextField txt_Proveedores_Telefono_Admin;
     private javax.swing.JTextField txt_RegistrarMaterial_IdMaterial_Func;
     private javax.swing.JTextField txt_RegistrarMaterial_TopicoEstudio_Func;
+    private javax.swing.JTextField txt_Registrar_ApellidoMaterno_Admin;
+    private javax.swing.JTextField txt_Registrar_ApellidoPaterno_Admin;
     private javax.swing.JTextField txt_Registrar_FechaDevolucion_Func;
     private javax.swing.JTextField txt_Registrar_FechaPrestamo_Func;
     private javax.swing.JTextField txt_Registrar_IdMaterial_Func;
+    private javax.swing.JTextField txt_Registrar_IdUsuario_Admin;
     private javax.swing.JTextField txt_Registrar_IdUsuario_Func;
     private javax.swing.JTextField txt_Registrar_NombreCompleto_Func;
+    private javax.swing.JTextField txt_Registrar_Nombre_Admin;
     private javax.swing.JTextField txt_Registrar_TituloMaterial_Func;
     private javax.swing.JTextField txttxt_RegistrarMaterial_Autor_Func;
     private javax.swing.JTextField txttxt_RegistrarMaterial_Categorias_Func;
