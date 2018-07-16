@@ -20,6 +20,8 @@ public class AutorDAOImpl implements AutorDAO {
     private static final String FIND_AUTOR_BY_ID = "SELECT * FROM " + Tabla.Autor + " WHERE id_autor = (?)";
     private static final String FIND_AUTOR_BY_NAME = "SELECT * FROM " + Tabla.Autor + " WHERE nombre_autor = ? AND apaterno_autor = ?";
     private static final String FIND_ALL_AUTOR = "SELECT * FROM " + Tabla.Autor;
+    private static final String FIND_ALL_AUTOR_BY_RECURSO_ID = "SELECT * FROM " + Tabla.Recurso_Autor +
+        " ra JOIN biblioteca.Autor aut ON(aut.id_autor = ra.id_autor) WHERE id_recurso = ?";
     private static final String UPDATE_AUTOR = "UPDATE " + Tabla.Autor + " SET nombre_autor = ?, apaterno_autor = ? WHERE id_autor = ?";
     private static final String REMOVE_AUTOR = "DELETE FROM " + Tabla.Autor + " WHERE id_autor = ?";
 
@@ -42,7 +44,7 @@ public class AutorDAOImpl implements AutorDAO {
             throw new Exception("No se encontró ningun autor con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in AutorDAO.findById()");
+            System.out.println("SQLException in AutorDAO.findListById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
@@ -152,6 +154,32 @@ public class AutorDAOImpl implements AutorDAO {
 
         } catch (SQLException e) {
             System.out.println("SQLException in AutorDAO.findByName()");
+            e.printStackTrace();
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    @Override
+    public List<Autor> findListById(int id) throws Exception {
+        try {
+            connection = Database.getConnection();
+            statement = connection.prepareStatement(FIND_ALL_AUTOR_BY_RECURSO_ID);
+            statement.setInt(1, id);
+            resultSet = statement.executeQuery();
+
+            List<Autor> autors = new ArrayList<>();
+
+            while (resultSet.next()) {
+                Autor autor = castAutor();
+                autors.add(autor);
+            }
+
+            if (autors.size() != 0) return autors;
+
+            throw new Exception("No se encontró ningun topico");
+
+        } catch (SQLException e) {
+            System.out.println("SQLException in AutorDAO.findListById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }

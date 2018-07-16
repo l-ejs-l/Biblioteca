@@ -42,7 +42,7 @@ public class EditorialDAOImpl implements EditorialDAO {
             throw new Exception("No se encontró ninguna editorial con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in EditorialDAO.findById()");
+            System.out.println("SQLException in EditorialDAO.findListById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
@@ -147,7 +147,7 @@ public class EditorialDAOImpl implements EditorialDAO {
             throw new Exception("No se encontró una Editorial con el nombre indicado");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in EditorialDAO.findById()");
+            System.out.println("SQLException in EditorialDAO.findListById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
@@ -161,8 +161,7 @@ public class EditorialDAOImpl implements EditorialDAO {
     }
 
     private Editorial castEditorial() throws SQLException {
-        Editorial editorial;
-        editorial = new Editorial();
+        Editorial editorial = new Editorial();
         editorial.setEditorial(resultSet.getString("editorial"));
         editorial.setId(resultSet.getInt("id_editorial"));
         return editorial;

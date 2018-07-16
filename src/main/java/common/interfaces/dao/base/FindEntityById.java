@@ -1,7 +1,7 @@
 package common.interfaces.dao.base;
 
 /**
- * Interfaz que contiene método generico findById() para realizar la busqueda por id en la DB de la entidad <T>
+ * Interfaz que contiene método generico findListById() para realizar la busqueda por id en la DB de la entidad <T>
  *
  * @param <T> Entidad generica
  */

@@ -1,6 +1,9 @@
 package test;
 
-import common.dao.*;
+import common.dao.AutorDAOImpl;
+import common.dao.EditorialDAOImpl;
+import common.dao.RecursoDAOImpl;
+import common.dao.TopicoDAOImpl;
 import common.dominios.*;
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
@@ -78,6 +81,72 @@ public class RecursoDAOTest {
             recurso3.setTotalPaginas(30);
             recurso3.setRecurso(periodico);
             recursoDAO.save(recurso3);
+
+            Recurso recurso = recursoDAO.findById(1);
+            System.out.println("**********************");
+            System.out.println("Tipo Recurso: " + recurso.getTipoRecurso().toString());
+            System.out.println("Tipo Texto: " + recurso.getTipoTexto().toString());
+            System.out.println("Recurso: \n");
+            System.out.println(recurso.getRecurso());
+            recurso.getAutores().forEach(System.out::println);
+            System.out.println(recurso.getTitulo());
+            recurso.getTopicos().forEach(System.out::println);
+            System.out.println(recurso.getEditorial());
+            System.out.println("**********************");
+
+            Recurso rec = recursoDAO.findById(2);
+            System.out.println("\n**********************");
+            System.out.println("Tipo Recurso: " + rec.getTipoRecurso().toString());
+            System.out.println("Tipo Texto: " + rec.getTipoTexto().toString());
+            System.out.println("Recurso: \n");
+            System.out.println(rec.getRecurso());
+            rec.getAutores().forEach(System.out::println);
+            System.out.println(rec.getTitulo());
+            rec.getTopicos().forEach(System.out::println);
+            System.out.println(rec.getEditorial());
+            System.out.println("**********************");
+
+            Recurso rec3 = recursoDAO.findById(3);
+            System.out.println("\n**********************");
+            System.out.println("Tipo Recurso: " + rec3.getTipoRecurso().toString());
+            System.out.println("Tipo Texto: " + rec3.getTipoTexto().toString());
+            System.out.println("Recurso: \n");
+            System.out.println(rec3.getRecurso());
+            rec3.getAutores().forEach(System.out::println);
+            System.out.println(rec3.getTitulo());
+            rec3.getTopicos().forEach(System.out::println);
+            System.out.println(rec3.getEditorial());
+            System.out.println("**********************");
+
+            System.out.println("\n**********************");
+            System.out.println("List all Recursos: ");
+            recursoDAO.findAll().forEach(System.out::println);
+            System.out.println("\n**********************");
+
+            System.out.println("\n**********************");
+            System.out.println("List all Recursos By Tipo Recurso: ");
+            recursoDAO.findByTipoRecurso(TipoRecurso.PERIODICO).forEach(System.out::println);
+            System.out.println("\n**********************");
+
+            System.out.println("\n**********************");
+            System.out.println("List all Recursos By Tipo Texto: ");
+            recursoDAO.findByTipoTexto(TipoTexto.NORMAL).forEach(System.out::println);
+            System.out.println("\n**********************");
+
+            System.out.println("\n**********************");
+            System.out.println("Modificar recurso");
+            System.out.println("Antes: " + recurso.getRecurso());
+            Libro lib = (Libro) recurso.getRecurso();
+            lib.setIsbn("123");
+            recursoDAO.update(recurso);
+            System.out.println("Despues: " + recurso.getRecurso());
+
+            System.out.println("\nAntes: " + recurso1.getTitulo() + "\n" + recurso1.getRecurso());
+            recurso1.setTitulo("Nuevo Titulo");
+            System.out.println("Despues: " + recurso1.getTitulo() + "\n" + recurso1.getRecurso());
+            System.out.println("**********************");
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

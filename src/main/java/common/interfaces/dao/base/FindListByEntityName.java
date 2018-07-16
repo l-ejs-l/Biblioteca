@@ -2,6 +2,11 @@ package common.interfaces.dao.base;
 
 import java.util.List;
 
+/**
+ * Interfaz que contiene método generico findByName() para realizar la busqueda por nombre en la DB de la entidad <T>
+ *
+ * @param <T> Entidad generica
+ */
 public interface FindListByEntityName<T> {
 
     /**

@@ -20,6 +20,8 @@ public class TopicoDAOImpl implements TopicoDAO {
     private static final String FIND_TOPICO_BY_NAME = "SELECT * FROM " + Tabla.Topico + " WHERE topico = (?)";
     private static final String FIND_TOPICO_BY_ID = "SELECT * FROM " + Tabla.Topico + " WHERE id_topico = (?)";
     private static final String FIND_ALL_TOPICO = "SELECT * FROM " + Tabla.Topico;
+    private static final String FIND_ALL_TOPICO_BY_RECURSO_ID = "SELECT * FROM " + Tabla.Topico_Recurso +
+        " tr JOIN biblioteca.Topico top ON(top.id_topico = tr.id_topico) WHERE id_recurso = ?";
     private static final String UPDATE_TOPICO = "UPDATE " + Tabla.Topico + " SET topico = ? WHERE id_topico = ?";
     private static final String REMOVE_TOPICO = "DELETE FROM " + Tabla.Topico + " WHERE id_topico = ?";
 
@@ -43,7 +45,7 @@ public class TopicoDAOImpl implements TopicoDAO {
             throw new Exception("No se encontró ningun topico con ese id");
 
         } catch (SQLException e) {
-            System.out.println("SQLException in TopicoDAO.findById()");
+            System.out.println("SQLException in TopicoDAO.findListById()");
             e.printStackTrace();
             throw new Exception(e.getMessage());
         }
@@ -156,6 +158,32 @@ public class TopicoDAOImpl implements TopicoDAO {
         }
     }
 
+    @Override
+    public List<Topico> findListById(int id) throws Exception {
+        try {
+            connection = Database.getConnection();
+            statement = connection.prepareStatement(FIND_ALL_TOPICO_BY_RECURSO_ID);
+            statement.setInt(1, id);
+            resultSet = statement.executeQuery();
+
+            List<Topico> topicos = new ArrayList<>();
+
+            while (resultSet.next()) {
+                Topico topico = castTopico();
+                topicos.add(topico);
+            }
+
+            if (topicos.size() != 0) return topicos;
+
+            throw new Exception("No se encontró ningun topico");
+
+        } catch (SQLException e) {
+            System.out.println("SQLException in TopicoDAO.findListById()");
+            e.printStackTrace();
+            throw new Exception(e.getMessage());
+        }
+    }
+
     private Topico getTopico() throws SQLException {
         if (resultSet.next()) {
             return castTopico();
@@ -164,10 +192,10 @@ public class TopicoDAOImpl implements TopicoDAO {
     }
 
     private Topico castTopico() throws SQLException {
-        Topico topico;
-        topico = new Topico();
+        Topico topico = new Topico();
         topico.setTopico(resultSet.getString("topico"));
         topico.setId(resultSet.getInt("id_topico"));
         return topico;
     }
+
 }
