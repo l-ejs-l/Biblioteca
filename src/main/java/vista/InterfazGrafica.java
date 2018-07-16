@@ -30,7 +30,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
      */
     private void initComponentsList() {
         listaComponentes.add(pnlRegistroPrestamos);
-        listaComponentes.add(pnlClientes);
         listaComponentes.add(pnlDevolucionMultas);
         listaComponentes.add(pnlIngresoMaterial);
     }
@@ -145,25 +144,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         tblPrecios6 = new javax.swing.JTable();
         btnInsertar18 = new javax.swing.JButton();
         btnInsertar19 = new javax.swing.JButton();
-        pnlClientes = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        txtVendedor7 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        txtNumeroCliente2 = new javax.swing.JTextField();
-        txtNombre2 = new javax.swing.JTextField();
-        txtEmail2 = new javax.swing.JTextField();
-        btnBuscar2 = new javax.swing.JButton();
-        btnInsertar2 = new javax.swing.JButton();
-        btnActualizar2 = new javax.swing.JButton();
-        btnLimpiar2 = new javax.swing.JButton();
-        btnListar2 = new javax.swing.JButton();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        txaClientes2 = new javax.swing.JTextArea();
-        btnEliminar2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         mniDatosCliente = new javax.swing.JMenuItem();
@@ -176,7 +156,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         mnSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1200, 625));
 
         pnlRegistroPrestamos.setBackground(new java.awt.Color(255, 204, 102));
         pnlRegistroPrestamos.setAlignmentX(0.0F);
@@ -361,7 +340,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                                     .addComponent(jLabel41)
                                     .addComponent(jLabel59)
                                     .addComponent(btn_Registrar_Registrar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 427, Short.MAX_VALUE)
                                 .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(pnlRegistroPrestamosLayout.createSequentialGroup()
                                         .addComponent(btn_Registrar_Renovar_Func, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -486,7 +465,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGroup(pnlRegistroPrestamosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn_Registrar_Eliminar_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_Registrar_LimpiarCampos_Func, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 164, Short.MAX_VALUE))
+                .addGap(0, 187, Short.MAX_VALUE))
         );
 
         jLabel69.getAccessibleContext().setAccessibleName("Listar Préstamos al Usuario");
@@ -886,7 +865,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                                             .addComponent(jLabel43)
                                             .addComponent(jLabel63)
                                             .addComponent(jLabel44))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 320, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 345, Short.MAX_VALUE)
                                         .addGroup(pnlIngresoMaterialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(txt_RegistrarMaterial_TopicoEstudio_Func, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIngresoMaterialLayout.createSequentialGroup()
@@ -983,169 +962,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        pnlClientes.setBackground(new java.awt.Color(255, 204, 102));
-        pnlClientes.setAlignmentX(0.0F);
-        pnlClientes.setAlignmentY(25.0F);
-
-        jLabel11.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel11.setText("NOMBRE COMPLETO");
-
-        jLabel22.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel22.setText("NUMERO CLIENTE");
-
-        jLabel23.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel23.setText("DATOS CLIENTE");
-
-        jLabel70.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
-        jLabel70.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel70.setText("LISTA CLIENTES");
-
-        jLabel47.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel47.setText("VENDEDOR:");
-
-        txtVendedor7.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-
-        jLabel48.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel48.setText("EMAIL");
-
-        btnBuscar2.setText("Buscar");
-        btnBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar2ActionPerformed(evt);
-            }
-        });
-
-        btnInsertar2.setText("Insertar");
-        btnInsertar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInsertar2ActionPerformed(evt);
-            }
-        });
-
-        btnActualizar2.setText("Actualizar");
-        btnActualizar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizar2ActionPerformed(evt);
-            }
-        });
-
-        btnLimpiar2.setText("Limpiar");
-        btnLimpiar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiar2ActionPerformed(evt);
-            }
-        });
-
-        btnListar2.setText("Listar");
-        btnListar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnListar2ActionPerformed(evt);
-            }
-        });
-
-        txaClientes2.setColumns(20);
-        txaClientes2.setRows(5);
-        jScrollPane6.setViewportView(txaClientes2);
-
-        btnEliminar2.setText("Eliminar");
-        btnEliminar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminar2ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlClientesLayout = new javax.swing.GroupLayout(pnlClientes);
-        pnlClientes.setLayout(pnlClientesLayout);
-        pnlClientesLayout.setHorizontalGroup(
-            pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlClientesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlClientesLayout.createSequentialGroup()
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel23)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlClientesLayout.createSequentialGroup()
-                                .addComponent(btnEliminar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(30, 30, 30))
-                            .addComponent(btnLimpiar2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnActualizar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnInsertar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(pnlClientesLayout.createSequentialGroup()
-                                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlClientesLayout.createSequentialGroup()
-                                        .addComponent(jLabel22)
-                                        .addGap(27, 27, 27))
-                                    .addGroup(pnlClientesLayout.createSequentialGroup()
-                                        .addComponent(jLabel48)
-                                        .addGap(22, 22, 22)))
-                                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtNombre2, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlClientesLayout.createSequentialGroup()
-                                        .addComponent(txtEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btnBuscar2))
-                                    .addComponent(txtNumeroCliente2, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlClientesLayout.createSequentialGroup()
-                                .addGap(53, 53, 53)
-                                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel70)
-                                    .addGroup(pnlClientesLayout.createSequentialGroup()
-                                        .addGap(80, 80, 80)
-                                        .addComponent(txtVendedor7, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(pnlClientesLayout.createSequentialGroup()
-                                .addGap(49, 49, 49)
-                                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnListar2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel47)))))
-                    .addComponent(jLabel11))
-                .addContainerGap(444, Short.MAX_VALUE))
-        );
-        pnlClientesLayout.setVerticalGroup(
-            pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlClientesLayout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel70))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlClientesLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNumeroCliente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel48))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(txtNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel22)
-                            .addComponent(txtEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscar2))
-                        .addGap(30, 30, 30)
-                        .addComponent(btnInsertar2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnActualizar2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnListar2, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(btnEliminar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlClientesLayout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(txtVendedor7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlClientesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(pnlClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel47)
-                            .addComponent(btnLimpiar2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-        );
-
         jMenuBar1.setAlignmentX(0.0F);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -1237,60 +1053,26 @@ public class InterfazGrafica extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 610, Short.MAX_VALUE)
-                    .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 610, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlRegistroPrestamos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(pnlDevolucionMultas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlIngresoMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBuscar2ActionPerformed
-
-    private void btnInsertar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnInsertar2ActionPerformed
-
-    private void btnActualizar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizar2ActionPerformed
-
-    private void btnLimpiar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLimpiar2ActionPerformed
-
-    private void btnListar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnListar2ActionPerformed
-
-    private void btnEliminar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEliminar2ActionPerformed
 
     private void btn_Listar_ListarMultas_FuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Listar_ListarMultas_FuncActionPerformed
         // TODO add your handling code here:
@@ -1436,7 +1218,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void mniProcesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProcesoActionPerformed
         // TODO add your handling code here:
-        setVisibleComponent(pnlClientes);
+       
     }//GEN-LAST:event_mniProcesoActionPerformed
 
     private void mniProceso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniProceso1ActionPerformed
@@ -1495,16 +1277,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnActualizar2;
-    private javax.swing.JButton btnBuscar2;
-    private javax.swing.JButton btnEliminar2;
     private javax.swing.JButton btnInsertar10;
     private javax.swing.JButton btnInsertar18;
     private javax.swing.JButton btnInsertar19;
-    private javax.swing.JButton btnInsertar2;
     private javax.swing.JButton btnInsertar9;
-    private javax.swing.JButton btnLimpiar2;
-    private javax.swing.JButton btnListar2;
     private javax.swing.JButton btn_Actualizar_Multas_Usuarios_Func;
     private javax.swing.JButton btn_Borrar_Multas_Usuarios_Func;
     private javax.swing.JButton btn_Devolucion_Actualizar_Func;
@@ -1526,13 +1302,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton btn_Registrar_Registrar_Func;
     private javax.swing.JButton btn_Registrar_Renovar_Func;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel41;
@@ -1541,8 +1314,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
@@ -1552,7 +1323,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
@@ -1567,14 +1337,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JMenuItem mnSalir;
     private javax.swing.JMenuItem mniDatosCliente;
     private javax.swing.JMenuItem mniOrden;
     private javax.swing.JMenuItem mniOrden1;
     private javax.swing.JMenuItem mniProceso;
     private javax.swing.JMenuItem mniProceso1;
-    private javax.swing.JPanel pnlClientes;
     private javax.swing.JPanel pnlDevolucionMultas;
     private javax.swing.JPanel pnlIngresoMaterial;
     private javax.swing.JPanel pnlRegistroPrestamos;
@@ -1589,11 +1357,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JTable tblPrecios6;
     private javax.swing.JTable tbl_Listar_Multas_Usuarios_Func;
     private javax.swing.JTable tbl_Listar_PrestamosUsuario_Func;
-    private javax.swing.JTextArea txaClientes2;
-    private javax.swing.JTextField txtEmail2;
-    private javax.swing.JTextField txtNombre2;
-    private javax.swing.JTextField txtNumeroCliente2;
-    private javax.swing.JLabel txtVendedor7;
     private javax.swing.JTextField txt_Devolucion_ApellidoMaterno_Func;
     private javax.swing.JTextField txt_Devolucion_ApellidoPaterno_Func;
     private javax.swing.JTextField txt_Devolucion_IdUsuario_Func;
