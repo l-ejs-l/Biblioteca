@@ -1,7 +1,8 @@
 package common.dominios;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 @Data
 public class Libro implements Serializable {
@@ -13,6 +14,5 @@ public class Libro implements Serializable {
     private String lomo;
     private String portada;
     private String contraportada;
-    private Recurso recurso;
 
 }

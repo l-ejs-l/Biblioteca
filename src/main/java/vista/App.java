@@ -8,8 +8,8 @@ public class App {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				new MainFrame(true);
-				
+//				new MainFrame(true);
+				new InterfazGrafica().setVisible(true);
 			}
 		});
 	}

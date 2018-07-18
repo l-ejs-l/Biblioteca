@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.Set;
 
 /**
  * Esta clase implementa la interfaz CuentaDAO y sus métodos para mantener la entidad Cuenta
@@ -29,7 +29,7 @@ public class CuentaDAOImpl implements CuentaDAO {
     }
 
     @Override
-    public List<Cuenta> findAll() throws Exception {
+    public Set<Cuenta> findAll() throws Exception {
 //        try {
 //            Statement statement = connection.createStatement();
 //            ResultSet result = statement

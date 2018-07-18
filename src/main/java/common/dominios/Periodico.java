@@ -1,7 +1,9 @@
 package common.dominios;
 
+import lombok.Data;
+
 import java.io.Serializable;
-import lombok.*;
+import java.sql.Date;
 
 @Data
 public class Periodico implements Serializable {
@@ -10,6 +12,6 @@ public class Periodico implements Serializable {
 
     private Integer id;
     private String lema;
-    private Recurso recurso;
+    private Date fechaPublicacion;
 
 }

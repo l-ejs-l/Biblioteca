@@ -3,23 +3,25 @@ package common.dominios;
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Set;
 
 @Data
 public class Recurso<T> implements Serializable {
 
     private static final long serialVersionUID = -7684949284722148086L;
 
+    @EqualsAndHashCode.Exclude
     private Integer id;
     private String titulo;
     private int totalPaginas;
     private T recurso;
     private TipoRecurso tipoRecurso;
-    private List<Autor> autores;
+    private Set<Autor> autores;
     private Editorial editorial;
     private TipoTexto tipoTexto;
-    private List<Topico> topicos;
+    private Set<Topico> topicos;
 
 }
