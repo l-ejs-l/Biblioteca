@@ -4,6 +4,7 @@ package common.interfaces.dao.base;
  * Interfaz que contiene método generico update() para realizar una modificacion en la DB de la entidad <T>
  *
  * @param <T> Entidad Generica
+ * @author emilio
  */
 public interface UpdateEntity<T> {
     /**

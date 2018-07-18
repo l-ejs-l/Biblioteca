@@ -8,11 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Esta clase implementa la interfaz TopicoDAO y sus métodos para mantener la entidad Topico
+ *
+ * @author emilio
  */
 public class TopicoDAOImpl implements TopicoDAO {
 
@@ -30,7 +32,7 @@ public class TopicoDAOImpl implements TopicoDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Topico findById(int id) throws Exception {
+    public Topico find(int id) throws Exception {
 
         try {
             connection = Database.getConnection();
@@ -53,13 +55,13 @@ public class TopicoDAOImpl implements TopicoDAO {
 
 
     @Override
-    public List<Topico> findAll() throws Exception {
+    public Set<Topico> findAll() throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_ALL_TOPICO);
             resultSet = statement.executeQuery();
 
-            List<Topico> topicos = new ArrayList<>();
+            Set<Topico> topicos = new HashSet<>();
 
             while (resultSet.next()) {
                 Topico topico = castTopico();
@@ -159,14 +161,14 @@ public class TopicoDAOImpl implements TopicoDAO {
     }
 
     @Override
-    public List<Topico> findListById(int id) throws Exception {
+    public Set<Topico> findListById(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_ALL_TOPICO_BY_RECURSO_ID);
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
 
-            List<Topico> topicos = new ArrayList<>();
+            Set<Topico> topicos = new HashSet<>();
 
             while (resultSet.next()) {
                 Topico topico = castTopico();

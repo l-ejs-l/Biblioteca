@@ -8,11 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Esta clase implementa la interfaz AutorDAO y sus métodos para mantener la entidad Autor
+ *
+ * @author emilio
  */
 public class AutorDAOImpl implements AutorDAO {
 
@@ -30,7 +32,7 @@ public class AutorDAOImpl implements AutorDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Autor findById(int id) throws Exception {
+    public Autor find(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_AUTOR_BY_ID);
@@ -51,13 +53,13 @@ public class AutorDAOImpl implements AutorDAO {
     }
 
     @Override
-    public List<Autor> findAll() throws Exception {
+    public Set<Autor> findAll() throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_ALL_AUTOR);
             resultSet = statement.executeQuery();
 
-            List<Autor> autors = new ArrayList<>();
+            Set<Autor> autors = new HashSet<>();
 
             while (resultSet.next()) {
                 Autor autor = castAutor();
@@ -160,14 +162,14 @@ public class AutorDAOImpl implements AutorDAO {
     }
 
     @Override
-    public List<Autor> findListById(int id) throws Exception {
+    public Set<Autor> findListById(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_ALL_AUTOR_BY_RECURSO_ID);
             statement.setInt(1, id);
             resultSet = statement.executeQuery();
 
-            List<Autor> autors = new ArrayList<>();
+            Set<Autor> autors = new HashSet<>();
 
             while (resultSet.next()) {
                 Autor autor = castAutor();

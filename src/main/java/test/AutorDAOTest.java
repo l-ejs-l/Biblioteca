@@ -3,8 +3,11 @@ package test;
 import common.dao.AutorDAOImpl;
 import common.dominios.Autor;
 
-import java.util.List;
+import java.util.Set;
 
+/**
+ * @author emilio
+ */
 public class AutorDAOTest {
 
     public static void main(String[] args) {
@@ -30,12 +33,12 @@ public class AutorDAOTest {
             System.out.println("Autor ingresado");
             Autor autorToDelete = dao.findByName(autor3.getNombre(), autor3.getApellido());
             System.out.println("Encontrado Autor por nombre");
-            Autor findById = dao.findById(autorToDelete.getId());
+            Autor findById = dao.find(autorToDelete.getId());
             System.out.println("Encontrado autor por id");
             autorToDelete.setNombre("Modificado");
             dao.update(autorToDelete);
             System.out.println("Autor modificado correctamente");
-            List<Autor> all = dao.findAll();
+            Set<Autor> all = dao.findAll();
             all.forEach(System.out::println);
             dao.remove(autorToDelete.getId());
             System.out.println("Autor removido correctamente");

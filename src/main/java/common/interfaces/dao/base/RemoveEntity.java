@@ -4,6 +4,7 @@ package common.interfaces.dao.base;
  * Interfaz que contiene método generico remove() para eliminar de la DB la entidad <T>
  *
  * @param <T> Entidad Generica
+ * @author emilio
  */
 public interface RemoveEntity<T> {
 

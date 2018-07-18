@@ -9,6 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Esta clase implementa la interfaz RevistalDAO y sus métodos para mantener la entidad Revista
+ *
+ * @author emilio
+ */
 public class RevistaDAOImpl implements RevistaDAO {
 
     private static final String FIND_REVISTA_BY_ID = "SELECT * FROM " + Tabla.Revista + " WHERE id_recurso = (?)";
@@ -18,7 +23,7 @@ public class RevistaDAOImpl implements RevistaDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Revista findById(int id) throws Exception {
+    public Revista find(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_REVISTA_BY_ID);

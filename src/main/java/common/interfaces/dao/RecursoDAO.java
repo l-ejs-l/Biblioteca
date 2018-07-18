@@ -3,13 +3,13 @@ package common.interfaces.dao;
 import common.dominios.Recurso;
 import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
-import common.interfaces.dao.base.DAO;
 import common.interfaces.dao.base.FindListByEntityName;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Interfaz que extiende de DAO y contiene los métodos para mantener la entidad Recurso
+ * @author emilio
  */
 public interface RecursoDAO extends DAO<Recurso>, FindListByEntityName<Recurso> {
 
@@ -20,7 +20,7 @@ public interface RecursoDAO extends DAO<Recurso>, FindListByEntityName<Recurso> 
      * @return Set<Recurso> resultado de busqueda
      * @throws Exception en caso de no encontrar por TipoRecurso
      */
-    List<Recurso> findByTipoRecurso(TipoRecurso tipoRecurso) throws Exception;
+    Set<Recurso> findByTipoRecurso(TipoRecurso tipoRecurso) throws Exception;
 
     /**
      * Realiza la busqueda en la DB de entidades Recurso con el TipoTexto especificado
@@ -29,7 +29,7 @@ public interface RecursoDAO extends DAO<Recurso>, FindListByEntityName<Recurso> 
      * @return Set<Recurso> resultado de busqueda
      * @throws Exception en caso de no encontrar por TipoTexto
      */
-    List<Recurso> findByTipoTexto(TipoTexto tipoTexto) throws Exception;
+    Set<Recurso> findByTipoTexto(TipoTexto tipoTexto) throws Exception;
 
 
 }

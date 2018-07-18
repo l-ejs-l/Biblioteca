@@ -8,11 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Esta clase implementa la interfaz EditorialDAO y sus métodos para mantener la entidad Editorial
+ *
+ * @author emilio
  */
 public class EditorialDAOImpl implements EditorialDAO {
 
@@ -28,7 +30,7 @@ public class EditorialDAOImpl implements EditorialDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Editorial findById(int id) throws Exception {
+    public Editorial find(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_EDITORIAL_BY_ID);
@@ -49,13 +51,13 @@ public class EditorialDAOImpl implements EditorialDAO {
     }
 
     @Override
-    public List<Editorial> findAll() throws Exception {
+    public Set<Editorial> findAll() throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_ALL_EDITORIAL);
             resultSet = statement.executeQuery();
 
-            List<Editorial> editorials = new ArrayList<>();
+            Set<Editorial> editorials = new HashSet<>();
 
             while (resultSet.next()) {
                 Editorial topico = castEditorial();

@@ -9,6 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Esta clase implementa la interfaz LibrolDAO y sus métodos para mantener la entidad Libro
+ *
+ * @author emilio
+ */
 public class LibroDAOImpl implements LibroDAO {
 
     private static final String FIND_LIBRO_BY_ID = "SELECT * FROM " + Tabla.Libro + " WHERE id_recurso = ?";
@@ -18,7 +23,7 @@ public class LibroDAOImpl implements LibroDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Libro findById(int id) throws Exception {
+    public Libro find(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_LIBRO_BY_ID);

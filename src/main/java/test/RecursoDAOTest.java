@@ -9,8 +9,11 @@ import common.dominios.enums.TipoRecurso;
 import common.dominios.enums.TipoTexto;
 
 import java.sql.Date;
-import java.util.ArrayList;
+import java.util.HashSet;
 
+/**
+ * @author emilio
+ */
 public class RecursoDAOTest {
 
     public static void main(String[] args) {
@@ -23,8 +26,8 @@ public class RecursoDAOTest {
         Recurso<Libro> recurso1 = new Recurso<>();
         Recurso<Revista> recurso2 = new Recurso<>();
         Recurso<Periodico> recurso3 = new Recurso<>();
-        ArrayList<Autor> autores = new ArrayList<>();
-        ArrayList<Topico> topicos = new ArrayList<>();
+        HashSet<Autor> autores = new HashSet<>();
+        HashSet<Topico> topicos = new HashSet<>();
         Autor autor = new Autor();
 
         autor.setApellido("Shiaaa");
@@ -82,7 +85,7 @@ public class RecursoDAOTest {
             recurso3.setRecurso(periodico);
             recursoDAO.save(recurso3);
 
-            Recurso recurso = recursoDAO.findById(1);
+            Recurso recurso = recursoDAO.find(1);
             System.out.println("**********************");
             System.out.println("Tipo Recurso: " + recurso.getTipoRecurso().toString());
             System.out.println("Tipo Texto: " + recurso.getTipoTexto().toString());
@@ -94,7 +97,7 @@ public class RecursoDAOTest {
             System.out.println(recurso.getEditorial());
             System.out.println("**********************");
 
-            Recurso rec = recursoDAO.findById(2);
+            Recurso rec = recursoDAO.find(2);
             System.out.println("\n**********************");
             System.out.println("Tipo Recurso: " + rec.getTipoRecurso().toString());
             System.out.println("Tipo Texto: " + rec.getTipoTexto().toString());
@@ -106,7 +109,7 @@ public class RecursoDAOTest {
             System.out.println(rec.getEditorial());
             System.out.println("**********************");
 
-            Recurso rec3 = recursoDAO.findById(3);
+            Recurso rec3 = recursoDAO.find(3);
             System.out.println("\n**********************");
             System.out.println("Tipo Recurso: " + rec3.getTipoRecurso().toString());
             System.out.println("Tipo Texto: " + rec3.getTipoTexto().toString());

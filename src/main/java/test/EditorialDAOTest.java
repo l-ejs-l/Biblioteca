@@ -3,6 +3,9 @@ package test;
 import common.dao.EditorialDAOImpl;
 import common.dominios.Editorial;
 
+/**
+ * @author emilio
+ */
 public class EditorialDAOTest {
 
     public static void main(String[] args) {
@@ -25,7 +28,7 @@ public class EditorialDAOTest {
             System.out.println("Editorial Insertada correctamente");
             Editorial editorialToDelete = dao.findByName("asd");
             System.out.println("Encontre la editorial por nombre");
-            dao.findById(editorialToDelete.getId());
+            dao.find(editorialToDelete.getId());
             System.out.println("Encontre la editorial por id");
             editorialToDelete.setEditorial("Modificada");
             dao.update(editorialToDelete);

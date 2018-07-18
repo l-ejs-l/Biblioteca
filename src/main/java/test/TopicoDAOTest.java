@@ -3,7 +3,10 @@ package test;
 import common.dao.TopicoDAOImpl;
 import common.dominios.Topico;
 
-import java.util.List;
+/**
+ * @author emilio
+ */
+import java.util.Set;
 
 public class TopicoDAOTest {
 
@@ -27,12 +30,12 @@ public class TopicoDAOTest {
 
             Topico topicoToDelete = dao.findByName("Aventura");
             System.out.println("Encontre el topico aventura por nombre");
-            Topico topicoToFindById = dao.findById(topicoToDelete.getId());
+            Topico topicoToFindById = dao.find(topicoToDelete.getId());
             System.out.println("Encontre el topico aventura por id");
             topicoToDelete.setTopico("Modificado");
             dao.update(topicoToDelete);
             System.out.println("Topico modificado correctamente");
-            List<Topico> all = dao.findAll();
+            Set<Topico> all = dao.findAll();
             all.forEach(System.out::println);
             dao.remove(topicoToDelete.getId());
             System.out.println("Topico eliminado");

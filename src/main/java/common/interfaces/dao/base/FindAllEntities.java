@@ -1,11 +1,12 @@
 package common.interfaces.dao.base;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Interfaz que contiene método generico findAll() para realizar una busqueda en la DB de la entidad <T>
  *
  * @param <T> Entidad Generica
+ * @author emilio
  */
 public interface FindAllEntities<T> {
 
@@ -14,5 +15,5 @@ public interface FindAllEntities<T> {
      *
      * @return lista de con todas las entidades en cuestion
      */
-    List<T> findAll() throws Exception;
+    Set<T> findAll() throws Exception;
 }

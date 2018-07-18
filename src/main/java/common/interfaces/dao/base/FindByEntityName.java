@@ -4,6 +4,7 @@ package common.interfaces.dao.base;
  * Interfaz genérica que contiene método findByName() - buscarPorNombre
  *
  * @param <T> Tipo de entidad a implementar
+ * @author emilio
  */
 public interface FindByEntityName<T> {
 

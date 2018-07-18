@@ -9,6 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Esta clase implementa la interfaz PeriodicoDAO y sus métodos para mantener la entidad Periódico
+ *
+ * @author emilio
+ */
 public class PeriodicoDAOImpl implements PeriodicoDAO {
 
     private static final String FIND_PERIODICO_BY_ID = "SELECT * FROM " + Tabla.Periodico + " WHERE id_recurso = (?)";
@@ -18,7 +23,7 @@ public class PeriodicoDAOImpl implements PeriodicoDAO {
     private ResultSet resultSet = null;
 
     @Override
-    public Periodico findById(int id) throws Exception {
+    public Periodico find(int id) throws Exception {
         try {
             connection = Database.getConnection();
             statement = connection.prepareStatement(FIND_PERIODICO_BY_ID);
