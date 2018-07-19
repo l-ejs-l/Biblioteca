@@ -9,7 +9,7 @@ public class Biblioteca {
     private String nombre;
     private boolean esCentral;
     private Comuna comuna;
-    private Usuario funcionario;
+    private Usuario  funcionario;
     private String direccionCalle;
     private int direccionNumero;
 

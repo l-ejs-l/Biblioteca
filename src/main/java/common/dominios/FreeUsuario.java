@@ -2,14 +2,14 @@ package common.dominios;
 
 
 
-public class FreeCuenta extends Cuenta {
+public class FreeUsuario extends Usuario {
 
 	private String fName;
 	private String lName;
 	private String email;
 	
-	public FreeCuenta(String username, String password, String fName,
-                      String lName, String email) {
+	public FreeUsuario(String username, String password, String fName,
+                       String lName, String email) {
 		super(username, password,false);
 		this.fName = fName;
 		this.lName = lName;
@@ -28,17 +28,17 @@ public class FreeCuenta extends Cuenta {
 		return email;
 	}
 	
-	public String getUsuario(){
-		return super.getUsuario();
+	public String usuario(){
+		return super.usuario();
 	}
-	public String getClave(){
-		return super.getClave();
+	public String password(){
+		return super.password();
 	}
-	public void setUsuario(String username){
-		super.setUsuario(username);
+	public void usuario(String usuario){
+		super.usuario(usuario);
 	}
-	public void setClave(String password){
-		super.setClave(password);
+	public void password(String password){
+		super.password(password);
 	}
 
 	public void setfName(String fName) {

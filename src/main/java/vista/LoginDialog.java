@@ -1,20 +1,21 @@
 package vista;
 
-import common.dominios.Cuenta;
+import common.dominios.Usuario;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 
-public class LoginDialog extends JDialog implements FreeRegistrationEventListener, RequestAccountEventListener {
+public class LoginDialog extends JDialog implements RegistrationEventListener, RequestAccountEventListener {
 
     private final JPanel contentPanel = new JPanel();
     private JTextField textField;
     private JPasswordField passwordField;
-    private FreeRegistrationDialog freeRegistrationDialog;
+    private RegistrationDialog registrationDialog;
     private LogInEventListener loginListener;
-    private FreeRegistrationEventListener freeRegListener;
+    private RegistrationEventListener freeRegListener;
     private RequestAccountEventListener reqlistener;
     private boolean isExistingAccount;
 
@@ -23,7 +24,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
      */
     public LoginDialog(JFrame parent) {
         super(parent, "Ingresar", true);//true sets modal
-        freeRegistrationDialog = new FreeRegistrationDialog(this);
+        registrationDialog = new RegistrationDialog(this);
 
         setBounds(100, 100, 400, 235);
         getContentPane().setLayout(new BorderLayout());
@@ -38,22 +39,23 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
 
         JLabel lblUsername = new JLabel("Usuario");
         lblUsername.setFont(new Font("Tahoma", Font.BOLD, 13));
-        GridBagConstraints gbc_lblUsername = new GridBagConstraints();
-        gbc_lblUsername.insets = new Insets(0, 0, 5, 5);
-        gbc_lblUsername.anchor = GridBagConstraints.EAST;
-        gbc_lblUsername.gridx = 2;
-        gbc_lblUsername.gridy = 1;
-        contentPanel.add(lblUsername, gbc_lblUsername);
+        GridBagConstraints grigBagUsername = new GridBagConstraints();
+        grigBagUsername.insets = new Insets(0, 0, 5, 5);
+        grigBagUsername.anchor = GridBagConstraints.EAST;
+        grigBagUsername.gridx = 2;
+        grigBagUsername.gridy = 1;
+        contentPanel.add(lblUsername, grigBagUsername);
 
 
         textField = new JTextField();
-        GridBagConstraints gbc_textField = new GridBagConstraints();
-        gbc_textField.insets = new Insets(0, 0, 5, 5);
-        gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-        gbc_textField.gridx = 4;
-        gbc_textField.gridy = 1;
-        contentPanel.add(textField, gbc_textField);
+        GridBagConstraints grigBagTextField = new GridBagConstraints();
+        grigBagTextField.insets = new Insets(0, 0, 5, 5);
+        grigBagTextField.fill = GridBagConstraints.HORIZONTAL;
+        grigBagTextField.gridx = 4;
+        grigBagTextField.gridy = 1;
+        contentPanel.add(textField, grigBagTextField);
         textField.setColumns(10);
+
 
 
         JLabel lblPassword = new JLabel("Clave");
@@ -88,7 +90,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
             public void actionPerformed(ActionEvent arg0) {
                 String username = textField.getText();
                 String pass = new String(passwordField.getPassword());
-                Cuenta cuenta = new Cuenta(username, pass, false);
+                Usuario cuenta = new Usuario(username, pass, false);
                 if (loginListener != null)
                     loginListener.loginEventOccurred(cuenta);
             }
@@ -104,10 +106,10 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                freeRegistrationDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-                freeRegistrationDialog.setFreeRegistrationEventOberservers(LoginDialog.this);
-                freeRegistrationDialog.setRequestAccountEventListener(LoginDialog.this);
-                freeRegistrationDialog.setVisible(true);
+                registrationDialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+                registrationDialog.setFreeRegistrationEventOberservers(LoginDialog.this);
+                registrationDialog.setRequestAccountEventListener(LoginDialog.this);
+                registrationDialog.setVisible(true);
             }
         });
         buttonPane.add(btnRegFree);
@@ -123,7 +125,7 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
     }
 
     public boolean isAccountTaken(boolean b) {
-        freeRegistrationDialog.isAccountTaken(b);
+        registrationDialog.isAccountTaken(b);
 
         return b;
     }
@@ -132,14 +134,14 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
         this.loginListener = listener;
     }
 
-    public void setFreeRegEventListener(FreeRegistrationEventListener listener) {
+    public void setFreeRegEventListener(RegistrationEventListener listener) {
         this.freeRegListener = listener;
     }
 
 
-    //FreeRegistrationDialog calling this method, pass event object to MainFrame
+    //RegistrationDialog calling this method, pass event object to MainFrame
     @Override
-    public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
+    public void FreeRegistrationEventOccurred(RegistrationEvent e) {
         if (freeRegListener == null) {
             System.out.println("in Login: freeRegListener = null");
         }
@@ -157,10 +159,10 @@ public class LoginDialog extends JDialog implements FreeRegistrationEventListene
 
     public boolean isValidLogin(boolean b) {
         if (b == true) {
-            JOptionPane.showMessageDialog(null, "Successful Login");
+            JOptionPane.showMessageDialog(null, "Ingreso correcto");
 
         } else {
-            JOptionPane.showMessageDialog(null, "Login Failed");
+            JOptionPane.showMessageDialog(null, "Ingreso fallido");
         }
         return false;
 
