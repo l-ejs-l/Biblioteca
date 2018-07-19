@@ -1,13 +1,13 @@
 package vista;
 
-import common.dominios.Cuenta;
-import common.dominios.FreeCuenta;
+import common.dominios.FreeUsuario;
+import common.dominios.Usuario;
 import vista.controller.Controller;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class MainFrame extends JFrame implements LogInEventListener, FreeRegistrationEventListener, RequestAccountEventListener {
+public class MainFrame extends JFrame implements LogInEventListener, RegistrationEventListener, RequestAccountEventListener {
 
     private LoginDialog loginDialog;
     private Controller controller;
@@ -30,32 +30,32 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
 
 
     @Override
-    public void FreeRegistrationEventOccurred(FreeRegistrationEvent e) {
-        String username = e.getUserName();
+    public void FreeRegistrationEventOccurred(RegistrationEvent e) {
+        String username = e.getUsername();
         String password = e.getPassword();
-        boolean member = e.isMember();
-        String fName = e.getfName();
-        String lName = e.getlName();
-        String email = e.getEmail();
-        FreeCuenta fa = new FreeCuenta(username, password, fName, lName, email);
+        boolean member = e.isEs_miembro();
+        String fName = e.getNombre();
+        String lName = e.getApellido();
+        String email = e.getCorreo();
+        FreeUsuario fa = new FreeUsuario(username, password, fName, lName, email);
         controller.addAccount(fa);
     }
 
 
     @Override
     public void requestAccountEventOccurred(RequestAccountEvent e) {
-        Cuenta cuenta = e.getCuenta();
+        Usuario cuenta = e.getCuenta();
         boolean b = false;
         try {
             b = controller.isExistingAccount(cuenta);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
         loginDialog.isAccountTaken(b);
     }
 
     @Override
-    public void loginEventOccurred(Cuenta cuenta) {
+    public void loginEventOccurred(Usuario cuenta) {
         try {
             if (controller.isValidLogin(cuenta)) {
                 loginDialog.setVisible(false);
@@ -73,4 +73,6 @@ public class MainFrame extends JFrame implements LogInEventListener, FreeRegistr
             e.printStackTrace();
         }
     }
+
+
 }

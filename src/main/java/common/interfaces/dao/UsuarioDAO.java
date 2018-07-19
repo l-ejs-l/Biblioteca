@@ -1,11 +1,11 @@
 package common.interfaces.dao;
 
-import common.dominios.Cuenta;
+import common.dominios.Usuario;
 
 /**
- * Interfaz extiende de DAO y contiene declaracion de metodos para mantener entidad Cuenta
+ * Interfaz extiende de DAO y contiene declaracion de metodos para mantener entidad Usuario
  */
-public interface CuentaDAO extends DAO<Cuenta> {
+public interface UsuarioDAO extends DAO<Usuario> {
 
     /**
      * Método de verificacion si una cuenta esta tomada
@@ -14,7 +14,7 @@ public interface CuentaDAO extends DAO<Cuenta> {
      * @return boolean isCuentaTaken
      * @throws Exception Lanza una excepcion en caso de no poder recuperar el valor
      */
-    public boolean isCuentaTaken(Cuenta cuenta) throws Exception;
+    public boolean isCuentaTaken(Usuario cuenta) throws Exception;
 
     /**
      * Método de verificacion de login
@@ -23,6 +23,6 @@ public interface CuentaDAO extends DAO<Cuenta> {
      * @return boolean 
      * @throws Exception
      */
-    public boolean isValidLogin(Cuenta cuenta) throws Exception;
+    public boolean isValidLogin(Usuario cuenta) throws Exception;
 
 }
