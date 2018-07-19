@@ -5,5 +5,9 @@ package common.dominios.enums;
  */
 public enum Tabla {
     Cuenta,
-    Usuario
+    Usuario,
+    Libro,
+    Periodico,
+    Revista,
+    Recurso, Editorial, Autor, Recurso_Autor, Topico_Recurso, Topico
 }

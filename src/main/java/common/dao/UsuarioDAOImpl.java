@@ -8,6 +8,7 @@ import common.interfaces.dao.UsuarioDAO;
 
 import java.sql.*;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Esta clase implementa la interfaz UsuarioDAO y sus métodos para mantener la entidad Usuario
@@ -28,7 +29,7 @@ public class UsuarioDAOImpl implements UsuarioDAO {
     }
 
     @Override
-    public List<Usuario> findAll() throws Exception {
+    public Set<Usuario> findAll() throws Exception {
         try {
             Statement statement = connection.createStatement();
             ResultSet result = statement

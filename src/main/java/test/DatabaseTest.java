@@ -1,5 +1,6 @@
-package common.dao;
+package test;
 
+import common.dao.UsuarioDAOImpl;
 import common.dominios.FreeUsuario;
 
 public class DatabaseTest {
