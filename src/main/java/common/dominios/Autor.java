@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
 
+import java.io.Serializable;
+
 @Data
 public class Autor implements Serializable {
 
